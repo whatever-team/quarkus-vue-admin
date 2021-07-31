@@ -1,0 +1,13 @@
+package ${servicePackage};
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.transaction.Transactional;
+
+/**
+* Created by ${author} on ${date}.
+*/
+@ApplicationScoped
+@Transactional
+public class ${entityName}Service {
+
+}
