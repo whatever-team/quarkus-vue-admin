@@ -1,7 +1,8 @@
 package xyz.easyboot.web.common.dto;
 
+import org.jboss.resteasy.plugins.providers.multipart.InputPart;
+
 import javax.ws.rs.FormParam;
-import java.io.File;
 
 /**
  * @author wujiawei
@@ -10,7 +11,7 @@ import java.io.File;
  */
 public class MultipartBody {
     @FormParam("file")
-    public File file;
+    public InputPart file;
     
     @FormParam("other")
     public String other;

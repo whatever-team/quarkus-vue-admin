@@ -17,7 +17,7 @@
   </span>
 </a-alert>
 
-- 功能演示：https://whatever-team.github.io/quarkus-vue-admin admin/888888
+- 功能演示：~~https://whatever-team.github.io/quarkus-vue-admin admin/888888~~
 - 开发文档：https://whatever-team.github.io/quarkus-vue-admin-docs/
 
 ## 主要功能
