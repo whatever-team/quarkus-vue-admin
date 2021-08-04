@@ -119,18 +119,6 @@
             <version>1.69</version>
         </dependency>
     
-        <!-- 系统监控 -->
-        <dependency>
-            <groupId>com.github.oshi</groupId>
-            <artifactId>oshi-core</artifactId>
-            <version>5.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>net.java.dev.jna</groupId>
-            <artifactId>jna-platform</artifactId>
-            <version>5.8.0</version>
-        </dependency>
-        
     </dependencies>
     <build>
         <plugins>

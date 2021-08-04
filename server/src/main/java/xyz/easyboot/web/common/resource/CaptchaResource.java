@@ -6,6 +6,7 @@ import cn.hutool.captcha.AbstractCaptcha;
 import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.captcha.generator.RandomGenerator;
 import cn.hutool.core.date.DateUnit;
+import io.smallrye.mutiny.Uni;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.ws.rs.GET;
@@ -34,12 +35,12 @@ public class CaptchaResource {
      * @return
      */
     @GET
-    @Produces(value = MediaType.MULTIPART_FORM_DATA)
+    @Produces(value = MediaType.APPLICATION_OCTET_STREAM)
     public byte[] captcha(@QueryParam("t") String timestamp) {
         AbstractCaptcha captcha = CaptchaUtil.createGifCaptcha(116, 40);
-        captcha.setGenerator(new RandomGenerator("qwertyuiopasdfghjklzxcvbnm".toUpperCase(), 4));
+        captcha.setGenerator(new RandomGenerator("qwertyupasdfghjkzxcvbnm23456789".toUpperCase(), 4));
         String code = captcha.getCode();
-        TIMED_CACHE.put(timestamp, code, DateUnit.SECOND.getMillis() * 30);
+        TIMED_CACHE.put(timestamp, code, DateUnit.MINUTE.getMillis() * 3);
         return captcha.getImageBytes();
     }
     
