@@ -27,6 +27,17 @@
       <a-space class="operator">
         <a-button type="primary" @click="toAdd">新建</a-button>
         <a-button :disabled="selectedRowKeys.length === 0" @click="onDeleteBatch">批量删除</a-button>
+        <a-upload
+            name="file"
+            :multiple="false"
+            :showUploadList="false"
+            :action="importAction"
+            :headers="headers"
+            @change="handleImport"
+        >
+          <a-button type="primary" :loading="importLoading">导入</a-button>
+        </a-upload>
+        <a-button type="primary" @click="toExport" :loading="exportLoading">导出</a-button>
       </a-space>
       <a-table
           :loading="loading"
@@ -59,8 +70,9 @@
 </template>
 
 <script>
-import {list, remove, removeBatch} from '@/services/${lowerHyphenEntityName}'
+import {list, remove, removeBatch, exportExcel, importExcel} from '@/services/${lowerHyphenEntityName}'
 import EditForm from "./Edit";
+import {OssMixin} from "@/mixin/OssMixin";
 
 const columns = [
 <#list fields as field>
@@ -79,9 +91,13 @@ const columns = [
 export default {
   name: "index",
   components: {EditForm},
+  mixins: [OssMixin],
   data() {
     return {
+      importAction: importExcel,
       loading: false,
+      exportLoading: false,
+      importLoading: false,
       queryParam: {
         roleName: ''
       },
@@ -140,6 +156,39 @@ export default {
     },
     toUpdate(row) {
       this.$refs.form.update(row)
+    },
+    handleImport(info) {
+      if (info.file.status === 'uploading') {
+        this.importLoading = true;
+        return;
+      }
+      if (info.file.status === 'done') {
+        this.importLoading = false;
+        this.handleUpload(info, async () => {
+          this.search()
+          return true
+        }, (response) => {
+          this.$message.error(response.data.message)
+          return false
+        })
+      }
+    },
+    async toExport() {
+      this.exportLoading = true
+      const response = await exportExcel(this.queryParam)
+      const { data, headers } = response
+      const fileName = headers['content-disposition'].replace(/\w+;filename=(.*)/, '$1')
+      const blob = new Blob([data], {type: headers['content-type']})
+      let dom = document.createElement('a')
+      let url = window.URL.createObjectURL(blob)
+      dom.href = url
+      dom.download = decodeURI(fileName)
+      dom.style.display = 'none'
+      document.body.appendChild(dom)
+      dom.click()
+      dom.parentNode.removeChild(dom)
+      window.URL.revokeObjectURL(url)
+      this.exportLoading = false
     },
     async onDelete(id) {
       const response = await remove(id)

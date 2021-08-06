@@ -2,8 +2,11 @@ package xyz.easyboot.web.system.resource;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.util.CharsetUtil;
+import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.write.style.column.SimpleColumnWidthStyleStrategy;
 import io.vertx.core.http.HttpServerRequest;
+import io.vertx.core.http.HttpServerResponse;
+import io.vertx.ext.web.FileUpload;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -11,9 +14,9 @@ import org.jboss.resteasy.annotations.providers.multipart.MultipartForm;
 import org.jboss.resteasy.plugins.providers.multipart.InputPart;
 import xyz.easyboot.common.base.dto.Result;
 import xyz.easyboot.common.logging.BusinessLog;
-import xyz.easyboot.web.common.dto.MultipartBody;
+import xyz.easyboot.web.system.dto.export.SysVarExportDTO;
+import xyz.easyboot.web.system.entity.SysVar;
 
-import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -24,13 +27,13 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.StreamingOutput;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 
 /**
  * @author wujiawei
@@ -40,6 +43,9 @@ import java.nio.charset.StandardCharsets;
 @Slf4j
 @Path("demo")
 public class DemoResource {
+    
+    @Context
+    HttpServerResponse response;
     
     @BusinessLog
     @GET
@@ -95,4 +101,35 @@ public class DemoResource {
         }
     }
     
+    @Getter
+    @Setter
+    public static class FormData {
+        @FormParam("file")
+        private FileUpload file;
+    }
+    
+    @POST
+    @Path("export")
+    @Produces(MediaType.APPLICATION_OCTET_STREAM)
+    public Response exportExcel() {
+        List<SysVar> list = SysVar.listAll();
+        List<SysVarExportDTO> exportList = SysVarExportDTO.fromSysVar(list);
+    
+        StreamingOutput output = new StreamingOutput() {
+            @Override
+            public void write(OutputStream out) {
+                EasyExcel.write(out, SysVarExportDTO.class)
+                        .sheet("sheet1")
+                        .registerWriteHandler(new SimpleColumnWidthStyleStrategy(20))
+                        .doWrite(exportList);
+            }
+        };
+    
+        String fileName = URLEncoder.encode("SysVar" + DateUtil.now(), StandardCharsets.UTF_8).replaceAll("\\+", "%20");
+        return Response
+                .ok(output)
+                .header("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx")
+                .build();
+        
+    }
 }

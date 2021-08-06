@@ -113,10 +113,17 @@
             <artifactId>quarkus-smallrye-openapi</artifactId>
         </dependency>
     
+        <!-- Excel导入导出 -->
         <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15to18</artifactId>
-            <version>1.69</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.10</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>stax-api</artifactId>
+                    <groupId>stax</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     
     </dependencies>

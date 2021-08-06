@@ -16,4 +16,13 @@ public interface OssConfig {
     @WithDefault("./oss")
     String storePath();
     
+    /**
+     * 临时文件的路径
+     * @return
+     */
+    @WithDefault("./oss/temp")
+    String tempStorePath();
+    
+    
+    
 }

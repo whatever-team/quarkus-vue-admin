@@ -6,7 +6,6 @@ import cn.hutool.captcha.AbstractCaptcha;
 import cn.hutool.captcha.CaptchaUtil;
 import cn.hutool.captcha.generator.RandomGenerator;
 import cn.hutool.core.date.DateUnit;
-import io.smallrye.mutiny.Uni;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.ws.rs.GET;

@@ -25,6 +25,14 @@ export async function removeBatch(ids) {
   })
 }
 
+export async function exportExcel(param) {
+  return request(URL + '/export', METHOD.POST, param, {
+    responseType: 'blob'
+  })
+}
+
+export const importExcel = URL + '/import'
+
 export default {
-  list, add, update, remove, removeBatch
+  list, add, update, remove, removeBatch, exportExcel, importExcel
 }

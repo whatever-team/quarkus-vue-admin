@@ -2,7 +2,6 @@ package xyz.easyboot.web.common.resource;
 
 import cn.hutool.system.RuntimeInfo;
 import cn.hutool.system.SystemUtil;
-import cn.hutool.system.oshi.OshiUtil;
 import xyz.easyboot.common.base.dto.Result;
 import xyz.easyboot.web.common.dto.MonitorDTO;
 

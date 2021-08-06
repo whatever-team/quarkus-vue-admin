@@ -3,6 +3,8 @@ package xyz.easyboot.lifecycle;
 import io.quarkus.runtime.ShutdownEvent;
 import io.quarkus.runtime.StartupEvent;
 import org.jboss.logging.Logger;
+import xyz.easyboot.common.util.FileUtil;
+import xyz.easyboot.handler.OssConfig;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
@@ -19,8 +21,12 @@ public class AppLifecycleBean {
     
     @Inject
     Logger logger;
+    @Inject
+    OssConfig ossConfig;
     
     void onStart(@Observes StartupEvent ev) {
+        FileUtil.mkdir(ossConfig.storePath());
+        FileUtil.mkdir(ossConfig.tempStorePath());
         logger.info("The application is starting...");
     }
     

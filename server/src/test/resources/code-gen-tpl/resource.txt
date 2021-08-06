@@ -1,5 +1,7 @@
 package ${webPackage};
 
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.json.JSONUtil;
 import io.quarkus.hibernate.orm.panache.PanacheQuery;
 import io.quarkus.panache.common.Page;
 import io.quarkus.panache.common.Sort;
@@ -8,7 +10,10 @@ import xyz.easyboot.common.base.dto.PageInfo;
 import xyz.easyboot.common.base.dto.Result;
 import xyz.easyboot.common.base.message.impl.DefaultRespCodeMsg;
 import xyz.easyboot.common.util.BeanUtil;
+import org.jboss.resteasy.annotations.providers.multipart.MultipartForm;
 import xyz.easyboot.common.logging.BusinessLog;
+import xyz.easyboot.web.common.dto.MultipartBody;
+import xyz.easyboot.web.common.service.ExcelService;
 import ${fullEntityName};
 import ${servicePackage}.${entityName}Service;
 
@@ -25,6 +30,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -40,6 +49,8 @@ public class ${entityName}Resource extends BaseResource {
 
     @Inject
     ${entityName}Service service;
+    @Inject
+    ExcelService excelService;
 
     @BusinessLog("查询${entityName}")
     @GET
@@ -107,6 +118,32 @@ public class ${entityName}Resource extends BaseResource {
             throw new IllegalArgumentException("Please check you parameter, ids must not be empty");
         }
         ${entityName}.delete("id in (?1)", Arrays.stream(idArr).map(Long::parseLong).collect(Collectors.toList()));
+        return Result.defaultResp();
+    }
+
+    @BusinessLog("导出${entityName}到Excel")
+    @POST
+    @Path("export")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_OCTET_STREAM)
+    public Response exportExcel() {
+        List<${entityName}> exportList = ${entityName}.listAll();
+        File target = excelService.doExport("${entityName}" + DateUtil.now(), ${entityName}.class, exportList);
+        return Response.ok(target)
+                .header("Content-disposition", "attachment;filename=" + target.getName())
+                .build();
+    }
+
+    @BusinessLog("导入${entityName}")
+    @POST
+    @Path("import")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    public Result<Object> importExcel(@MultipartForm MultipartBody body) throws IOException {
+        InputStream is = FileUtil.getInputStreamFromInputPart(body.file);
+        excelService.doImport(is, ${entityName}.class, list -> {
+            List<${entityName}> results = BeanUtil.copyToList(list, ${entityName}.class);
+            ${entityName}.persist(results);
+        });
         return Result.defaultResp();
     }
 

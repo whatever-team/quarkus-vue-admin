@@ -1,10 +1,5 @@
 package xyz.easyboot.web.common.dto;
 
-import lombok.Data;
-
-
-import java.util.List;
-
 /**
  * @author wujiawei
  * @see
