@@ -72,7 +72,7 @@ public class SysUserService {
     
             // 组合权限
             LoginDTO.Permission permission = new LoginDTO.Permission();
-            permission.setId(role.roleCode);
+            permission.setId("*");
             permission.setOperation(menus.stream().map(x -> {
                 if (x != null && x.menu != null && StringUtil.isNotEmpty(x.menu.permission)) {
                     return x.menu.permission;

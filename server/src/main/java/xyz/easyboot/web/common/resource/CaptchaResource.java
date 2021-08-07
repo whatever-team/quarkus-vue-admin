@@ -23,7 +23,7 @@ import javax.ws.rs.core.MediaType;
 @Path("captcha")
 public class CaptchaResource {
     
-    public static final TimedCache<String, String> TIMED_CACHE = CacheUtil.newTimedCache(4);
+    public static final TimedCache<String, String> TIMED_CACHE = CacheUtil.newTimedCache(DateUnit.MINUTE.getMillis() * 3);
     
     /**
      * 为每个验证码code分配一个主键codeId。

@@ -13,7 +13,6 @@ export const OssMixin = {
         this.headers = {
             Authorization : Cookie.get('Authorization')
         }
-        console.log(this.headers)
     },
     methods: {
         uploadAction(type) {

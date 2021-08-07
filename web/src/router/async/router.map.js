@@ -161,6 +161,9 @@ const routerMap = {
   multipart: {
     component: () => import('@/pages/components/Multipart')
   },
+  permission: {
+    component: () => import('@/pages/components/Permission')
+  },
   system: {
     name: '系统管理',
     icon: 'setting',
