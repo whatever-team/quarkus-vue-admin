@@ -54,8 +54,8 @@ public class CodeGenerator {
         
         for(int var3 = 0; var3 < var2; ++var3) {
             Class clazz = var1[var3];
-//            genController(clazz);
-//            genJPAService(clazz);
+            genController(clazz);
+            genJPAService(clazz);
             genApiJs(clazz);
             genVueIndex(clazz);
             genVueForm(clazz);
