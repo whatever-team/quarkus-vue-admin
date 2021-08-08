@@ -48,6 +48,9 @@ public class SysUserService {
         
         // 验证码校验
         String codeFromCache = CaptchaResource.TIMED_CACHE.get(param.getT());
+        if (StringUtil.isEmpty(codeFromCache)) {
+            throw new RuntimeException("验证码已过期");
+        }
         if (!StringUtil.equals(param.getCode().toUpperCase(), codeFromCache)) {
             throw new RuntimeException("验证码错误");
         }
