@@ -61,7 +61,7 @@ public class MultipartResource {
         File target = FileUtil.writeFromStream(is, storePath);
         MultipartResponse response =  new MultipartResponse();
         response.setName(target.getName());
-        response.setPath(path.replaceAll("/", "-"));
+        response.setPath(path);
         response.setSize(FileUtil.size(target));
         return new Result<>(response);
     }

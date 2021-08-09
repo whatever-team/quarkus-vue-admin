@@ -1,7 +1,7 @@
 <template>
   <page-layout :avatar="previewAction(currUser.avatar)">
     <div slot="headerContent">
-      <div class="title">{{welcome.timeFix[lang]}}，{{currUser.username}}，{{welcome.message[lang]}}</div>
+      <div class="title">{{welcome.timeFix}}，{{currUser.username}}，{{welcome.message}}</div>
       <div>{{currUser.roleNames.join(',')}}</div>
     </div>
     <template slot="extra">
@@ -84,6 +84,7 @@ import HeadInfo from '@/components/tool/HeadInfo'
 import Radar from '@/components/chart/Radar'
 import {mapState} from 'vuex'
 import {request, METHOD} from '@/utils/request'
+import {BASE_URL} from "@/services/api";
 import {OssMixin} from "@/mixin/OssMixin";
 
 export default {
@@ -107,10 +108,10 @@ export default {
     ...mapState('setting', ['lang'])
   },
   created() {
-    request('/user/welcome', METHOD.GET).then(res => this.welcome = res.data)
-    request('/work/activity', METHOD.GET).then(res => this.activities = res.data)
-    request('/work/team', METHOD.GET).then(res => this.teams = res.data)
-    request('/project', METHOD.GET).then(res => {
+    request(BASE_URL + '/mock/user/welcome', METHOD.GET).then(res => this.welcome = res.data)
+    request(BASE_URL + '/mock/work/activity', METHOD.GET).then(res => this.activities = res.data)
+    request(BASE_URL + '/mock/work/team', METHOD.GET).then(res => this.teams = res.data)
+    request(BASE_URL + '/mock/project', METHOD.GET).then(res => {
         this.projects = res.data
         this.loading = false
       })

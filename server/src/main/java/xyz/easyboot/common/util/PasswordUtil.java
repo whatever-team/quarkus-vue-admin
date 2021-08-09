@@ -12,7 +12,7 @@ public class PasswordUtil {
     public static final String DEFAULT_PASSWORD = "000000";
     
     public static String encrypt(String password) {
-        return SecureUtil.md5("000000");
+        return SecureUtil.md5(password);
     }
     
 }

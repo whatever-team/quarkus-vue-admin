@@ -13,7 +13,7 @@ public interface OssConfig {
      * 无需鉴权的路径Pattern
      * @return
      */
-    @WithDefault("./oss")
+    @WithDefault("./oss/")
     String storePath();
     
     /**
@@ -22,7 +22,5 @@ public interface OssConfig {
      */
     @WithDefault("./oss/temp")
     String tempStorePath();
-    
-    
     
 }
