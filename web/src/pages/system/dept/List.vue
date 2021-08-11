@@ -24,7 +24,7 @@
     <div>
       <a-space class="operator">
         <a-button type="primary" @click="toAdd">新建</a-button>
-        <a-button :disabled="selectedRowKeys.length === 0" @click="onDeleteBatch">批量删除</a-button>
+        <a-button :disabled="selectedRowKeys.length === 0" @click="onDeleteBatch" v-auth="'system:delete'">批量删除</a-button>
       </a-space>
       <a-table
           :loading="loading"
@@ -45,7 +45,7 @@
               title="是否确认删除?"
               @confirm="() => onDelete(record.id)"
           >
-            <a-button size="small">删除</a-button>
+            <a-button size="small" v-auth="'system:delete'">删除</a-button>
           </a-popconfirm>
         </template>
 

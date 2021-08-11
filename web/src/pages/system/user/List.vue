@@ -49,7 +49,7 @@
                 title="是否确认删除?"
                 @confirm="onDeleteBatch"
             >
-              <a-button :disabled="selectedRowKeys.length === 0">批量删除</a-button>
+              <a-button :disabled="selectedRowKeys.length === 0" v-auth="'system:delete'">批量删除</a-button>
             </a-popconfirm>
 
           </a-space>
@@ -73,7 +73,7 @@
                   title="是否确认删除?"
                   @confirm="() => onDelete(record.id)"
               >
-                <a-button size="small">删除</a-button>
+                <a-button size="small" v-auth="'system:delete'">删除</a-button>
               </a-popconfirm>
             </template>
 

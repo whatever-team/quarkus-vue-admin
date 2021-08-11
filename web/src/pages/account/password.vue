@@ -15,11 +15,10 @@
       </a-form-model-item>
 
       <a-form-model-item :wrapper-col="{ span: 14, offset: 4 }">
-        <a-button type="primary" @click="onSubmit" :loading="submitLoading">
+        <a-button type="primary" @click="onSubmit" :loading="submitLoading"  v-auth="'system:change:password'">
           提交
         </a-button>
       </a-form-model-item>
-
 
     </a-form-model>
   </a-modal>
