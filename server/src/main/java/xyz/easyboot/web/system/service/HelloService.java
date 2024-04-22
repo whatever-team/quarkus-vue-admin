@@ -1,6 +1,6 @@
 package xyz.easyboot.web.system.service;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
  * @author wujiawei

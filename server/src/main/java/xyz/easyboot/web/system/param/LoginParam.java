@@ -9,7 +9,7 @@ import lombok.Data;
  */
 @Data
 public class LoginParam {
-    private String name;
+    private String username;
     private String password;
     private String code;
     // 验证码绑定的t字段

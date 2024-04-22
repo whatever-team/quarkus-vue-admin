@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import xyz.easyboot.common.orm.entity.AuditableEntity;
 import xyz.easyboot.common.util.PasswordUtil;
 
-import javax.persistence.Entity;
-import javax.persistence.Index;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Index;
+import jakarta.persistence.Table;
 import java.util.List;
 
 /**
@@ -24,7 +24,8 @@ import java.util.List;
         }
 )
 public class SysUser extends AuditableEntity {
-    
+
+    public String name;
     public String username;
     public String phone;
     public String email;
@@ -44,6 +45,11 @@ public class SysUser extends AuditableEntity {
     public static SysUser findByPhoneAndPassword(String phone, String password) {
         password = PasswordUtil.encrypt(password);
         return SysUser.find("phone = ?1 and password = ?2", phone, password).firstResult();
+    }
+
+    public static SysUser findByUsernameAndPassword(String username, String password) {
+        password = PasswordUtil.encrypt(password);
+        return SysUser.find("username = ?1 and password = ?2", username, password).firstResult();
     }
     
     public static List<SysUser> findEnabled() {

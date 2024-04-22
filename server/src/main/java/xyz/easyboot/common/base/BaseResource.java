@@ -1,11 +1,10 @@
 package xyz.easyboot.common.base;
 
 import io.vertx.core.http.HttpServerRequest;
+import jakarta.ws.rs.core.Context;
 import lombok.extern.slf4j.Slf4j;
 import xyz.easyboot.common.util.TokenUtil;
 import xyz.easyboot.web.system.entity.SysUser;
-
-import javax.ws.rs.core.Context;
 
 /**
  * @author wujiawei

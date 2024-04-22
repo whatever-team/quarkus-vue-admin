@@ -1,7 +1,7 @@
 package ${servicePackage};
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.transaction.Transactional;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
 
 /**
 * Created by ${author} on ${date}.

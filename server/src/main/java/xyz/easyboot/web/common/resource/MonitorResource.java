@@ -5,8 +5,8 @@ import cn.hutool.system.SystemUtil;
 import xyz.easyboot.common.base.dto.Result;
 import xyz.easyboot.web.common.dto.MonitorDTO;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
 /**
  * @author wujiawei

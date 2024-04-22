@@ -3,8 +3,8 @@ package xyz.easyboot.web.system.service;
 import xyz.easyboot.web.system.entity.SysDict;
 import xyz.easyboot.web.system.entity.SysDictItem;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.transaction.Transactional;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

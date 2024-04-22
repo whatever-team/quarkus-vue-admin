@@ -1,16 +1,10 @@
 package xyz.easyboot.common.orm.listener;
 
 import cn.hutool.json.JSONUtil;
+import jakarta.persistence.*;
 import lombok.extern.slf4j.Slf4j;
 import xyz.easyboot.common.orm.entity.AuditableEntity;
 
-import javax.persistence.PostLoad;
-import javax.persistence.PostPersist;
-import javax.persistence.PostRemove;
-import javax.persistence.PostUpdate;
-import javax.persistence.PrePersist;
-import javax.persistence.PreRemove;
-import javax.persistence.PreUpdate;
 import java.util.Date;
 
 /**

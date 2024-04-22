@@ -9,9 +9,9 @@ import io.quarkus.scheduler.Scheduled;
 import lombok.extern.slf4j.Slf4j;
 import xyz.easyboot.handler.OssConfig;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.transaction.Transactional;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;

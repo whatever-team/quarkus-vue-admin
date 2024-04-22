@@ -9,8 +9,8 @@ import xyz.easyboot.web.system.entity.SysMenu;
 import xyz.easyboot.web.system.entity.SysRoleMenu;
 import xyz.easyboot.web.system.entity.SysUserRole;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.transaction.Transactional;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

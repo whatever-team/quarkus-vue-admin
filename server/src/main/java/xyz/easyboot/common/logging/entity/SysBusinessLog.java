@@ -2,11 +2,11 @@ package xyz.easyboot.common.logging.entity;
 
 import xyz.easyboot.common.orm.entity.AuditableEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.Index;
-import javax.persistence.Lob;
-import javax.persistence.Table;
-import javax.transaction.Transactional;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Index;
+import jakarta.persistence.Lob;
+import jakarta.persistence.Table;
+import jakarta.transaction.Transactional;
 
 /**
  * @author wujiawei

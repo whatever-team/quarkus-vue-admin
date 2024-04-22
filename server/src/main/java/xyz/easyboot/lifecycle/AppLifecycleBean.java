@@ -2,13 +2,12 @@ package xyz.easyboot.lifecycle;
 
 import io.quarkus.runtime.ShutdownEvent;
 import io.quarkus.runtime.StartupEvent;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.event.Observes;
+import jakarta.inject.Inject;
 import org.jboss.logging.Logger;
 import xyz.easyboot.common.util.FileUtil;
 import xyz.easyboot.handler.OssConfig;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.event.Observes;
-import javax.inject.Inject;
 
 /**
  * 监听启动及关闭事件

@@ -15,5 +15,12 @@ public interface AuthorizationConfig {
      */
     @WithDefault("test")
     String permitPatterns();
+
+    /**
+     * 是否开启登录验证码
+     * @return
+     */
+    @WithDefault("false")
+    Boolean captchaEnable();
     
 }

@@ -3,17 +3,18 @@ package xyz.easyboot.common.logging;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import jakarta.enterprise.context.Dependent;
 import lombok.extern.slf4j.Slf4j;
 import xyz.easyboot.common.base.dto.Result;
 import xyz.easyboot.common.logging.entity.SysBusinessLog;
 
-import javax.annotation.Priority;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.Interceptor;
-import javax.interceptor.InvocationContext;
-import javax.transaction.UserTransaction;
+import jakarta.annotation.Priority;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.interceptor.AroundInvoke;
+import jakarta.interceptor.Interceptor;
+import jakarta.interceptor.InvocationContext;
+import jakarta.transaction.UserTransaction;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
@@ -26,7 +27,7 @@ import java.lang.reflect.Parameter;
 @BusinessLog
 @Priority(10)
 @Interceptor
-@ApplicationScoped
+@Dependent
 public class LogInterceptor {
     
     @Inject
@@ -65,8 +66,7 @@ public class LogInterceptor {
         businessLog.method = methodName;
         businessLog.parameter = parameterArray.toString();
         businessLog.title = logValue;
-        if (ret instanceof Result) {
-            Result<?> result = (Result<?>) ret;
+        if (ret instanceof Result<?> result) {
             businessLog.code = result.getCode();
             businessLog.message = result.getMessage();
             businessLog.response = JSONUtil.toJsonStr(result);

@@ -2,9 +2,9 @@ package xyz.easyboot.web.system.entity;
 
 import xyz.easyboot.common.orm.entity.AuditableEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.Index;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Index;
+import jakarta.persistence.Table;
 
 /**
  * 系统角色

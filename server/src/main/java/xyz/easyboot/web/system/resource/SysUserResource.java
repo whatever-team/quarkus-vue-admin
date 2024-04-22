@@ -19,20 +19,20 @@ import xyz.easyboot.web.system.param.ChangePwdParam;
 import xyz.easyboot.web.system.param.LoginParam;
 import xyz.easyboot.web.system.service.SysUserService;
 
-import javax.inject.Inject;
-import javax.transaction.Transactional;
-import javax.validation.Valid;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.DefaultValue;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.DELETE;
+import jakarta.ws.rs.DefaultValue;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.MediaType;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -158,25 +158,5 @@ public class SysUserResource extends BaseResource {
         }
         service.delete(idArr);
         return Result.defaultResp();
-    }
-    
-    @BusinessLog("后台用户登录")
-    @POST
-    @Path("login")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Result<LoginDTO> login(LoginParam param) {
-        LoginDTO loginDTO = service.login(param);
-        Result<LoginDTO> result = new Result<>(loginDTO);
-        result.setMessage("登录成功，欢迎回来");
-        return result;
-    }
-    
-    @BusinessLog("修改密码")
-    @PUT
-    @Path("password")
-    public Result<Object> changePassword(@Valid ChangePwdParam param) {
-        param.setId(getUserId());
-        boolean flag = service.changePassword(param);
-        return flag ? Result.defaultResp() : new Result<>(DefaultRespCodeMsg.FAIL);
     }
 }

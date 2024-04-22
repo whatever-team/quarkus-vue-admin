@@ -3,11 +3,11 @@ package xyz.easyboot.web.system.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import xyz.easyboot.common.orm.entity.AuditableEntity;
 
-import javax.persistence.Entity;
-import javax.persistence.Index;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Index;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 /**
  * @author wujiawei

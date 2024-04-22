@@ -2,7 +2,7 @@ package xyz.easyboot.web.common.dto;
 
 import org.jboss.resteasy.plugins.providers.multipart.InputPart;
 
-import javax.ws.rs.FormParam;
+import jakarta.ws.rs.FormParam;
 
 /**
  * @author wujiawei

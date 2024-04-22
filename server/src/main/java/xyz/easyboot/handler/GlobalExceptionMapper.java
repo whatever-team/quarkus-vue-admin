@@ -1,14 +1,15 @@
 package xyz.easyboot.handler;
 
+import io.quarkus.security.ForbiddenException;
+import io.quarkus.security.UnauthorizedException;
+import jakarta.annotation.Priority;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.ext.ExceptionMapper;
+import jakarta.ws.rs.ext.Provider;
 import lombok.extern.slf4j.Slf4j;
 import xyz.easyboot.common.base.dto.Result;
 import xyz.easyboot.common.base.message.impl.DefaultRespCodeMsg;
 import xyz.easyboot.common.util.StringUtil;
-
-import javax.annotation.Priority;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.ext.ExceptionMapper;
-import javax.ws.rs.ext.Provider;
 
 /**
  * @author wujiawei
@@ -23,9 +24,21 @@ public class GlobalExceptionMapper implements ExceptionMapper<Throwable> {
     @Override
     public Response toResponse(Throwable e) {
         log.error(e.getMessage(), e);
-        Result<?> result = new Result<>(DefaultRespCodeMsg.FAIL.getCode(), e.toString());
+        Result<?> result = buildExceptionResult(e);
         result.setMessage(StringUtil.emptyToDefault(e.getMessage(), e.toString()));
         return Response.status(Response.Status.OK).entity(result).build();
     }
-    
+
+    private Result<?> buildExceptionResult(Throwable throwable) {
+        String code;
+        if (throwable instanceof UnauthorizedException) {
+            code = DefaultRespCodeMsg.UNAUTHORIZED.getCode();
+        } else if (throwable instanceof ForbiddenException) {
+            code = DefaultRespCodeMsg.FORBIDDEN.getCode();
+        } else {
+            code = DefaultRespCodeMsg.INTERNAL_SERVER_ERROR.getCode();
+        }
+        return new Result<>(code, throwable.toString());
+    }
+
 }

@@ -1,0 +1,1521 @@
+16:30:10 WARN  [io.ag.pool] (agroal-11) Datasource '<default>': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+16:30:10 WARN  [or.hi.en.jd.en.in.JdbcEnvironmentInitiator] (JPA Startup Thread: <default>) HHH000342: Could not obtain connection to query metadata: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:204)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:470)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:452)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:68)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1126)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:119)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 14 more
+
+16:30:10 WARN  [io.ag.pool] (agroal-11) Datasource '<default>': Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+16:30:10 WARN  [or.hi.en.jd.sp.SqlExceptionHelper] (JPA Startup Thread: <default>) SQL Error: 0, SQLState: 08S01
+16:30:10 ERROR [or.hi.en.jd.sp.SqlExceptionHelper] (JPA Startup Thread: <default>) Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+16:30:11 ERROR [io.qu.ru.Application] (Quarkus Main Thread) Failed to start application (with profile dev): java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:119)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:948)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:818)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at io.agroal.pool.ConnectionFactory.createConnection(ConnectionFactory.java:204)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:470)
+	at io.agroal.pool.ConnectionPool$CreateConnectionTask.call(ConnectionPool.java:452)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at io.agroal.pool.util.PriorityScheduledExecutor.beforeExecute(PriorityScheduledExecutor.java:68)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1126)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+16:30:11 INFO  [io.qu.de.de.IsolatedDevModeMain] (main) Attempting to start live reload endpoint to recover from previous Quarkus startup failure
+17:04:54 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+17:04:54 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+17:04:54 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+17:04:54 INFO  [io.quarkus] (Quarkus Main Thread) server 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 1.744s. Listening on: http://0.0.0.0:5935
+17:04:54 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+17:04:54 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+17:05:20 INFO  [xy.ea.li.AppLifecycleBean] (Shutdown thread) The application is stopping...
+17:05:20 INFO  [io.quarkus] (Shutdown thread) server stopped in 0.152s
+17:05:30 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+17:05:30 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+17:05:30 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+17:05:30 INFO  [io.quarkus] (Quarkus Main Thread) server 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 1.807s. Listening on: http://0.0.0.0:5935
+17:05:30 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+17:05:30 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+17:06:30 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+17:06:32 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:07:13 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] ([DevConsole]vert.x-eventloop-thread-0) File change detected: /Users/wuu/Projects/indie-hacker/quarkus-vue-admin/server/src/main/resources/application.properties
+17:07:13 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] ([DevConsole]vert.x-eventloop-thread-0) Restarting quarkus due to changes in application.properties.
+17:07:13 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+17:07:14 INFO  [io.quarkus] (Quarkus Main Thread) server stopped in 0.499s
+17:07:14 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+17:07:14 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+17:07:14 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+17:07:14 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 0.597s. Listening on: http://0.0.0.0:5935
+17:07:14 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+17:07:14 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+17:07:14 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] ([DevConsole]vert.x-eventloop-thread-0) Live reload total time: 1.116s 
+17:08:14 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+17:09:14 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+17:10:14 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+17:10:14 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+17:11:14 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-12) This is demo task
+17:11:35 WARN  [or.te.ut.TestcontainersConfiguration] (build-14) Attempted to read Testcontainers configuration file at file:/Users/wuu/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /Users/wuu/.testcontainers.properties (No such file or directory)
+17:11:35 INFO  [or.te.do.DockerMachineClientProviderStrategy] (build-14) docker-machine executable was not found on PATH ([/Library/Java/JavaVirtualMachines/jdk-11.0.20.1+1/Contents/Home/bin, /Users/wuu/.nvm/versions/node/v16.20.2/bin, /opt/homebrew/bin, /opt/homebrew/sbin, /usr/local/bin, /System/Cryptexes/App/usr/bin, /usr/bin, /bin, /usr/sbin, /sbin, /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin, /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin, /var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin, /Library/Apple/usr/bin, /Users/wuu/.cargo/bin, /Users/wuu/Library/Application Support/JetBrains/Toolbox/scripts, /Users/wuu/.orbstack/bin, /Users/wuu/.flutter/bin])
+17:11:35 WARN  [io.sm.op.ru.scanner] (build-24) SROAP04005: Could not find schema class in index: java.lang.Object
+17:11:35 WARN  [io.sm.op.ru.scanner] (build-24) SROAP04005: Could not find schema class in index: java.lang.Object
+17:11:35 WARN  [io.sm.op.ru.scanner] (build-24) SROAP04005: Could not find schema class in index: java.lang.Object
+17:11:35 WARN  [io.sm.op.ru.scanner] (build-24) SROAP04005: Could not find schema class in index: java.lang.Object
+17:11:36 INFO  [or.te.do.DockerClientProviderStrategy] (build-14) Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+17:11:36 INFO  [or.te.DockerClientFactory] (build-14) Docker host IP address is localhost
+17:11:36 INFO  [or.te.DockerClientFactory] (build-14) Connected to docker: 
+  Server Version: 25.0.5
+  API Version: 1.44
+  Operating System: OrbStack
+  Total Memory: 3915 MB
+17:11:36 INFO  [or.te.ut.ImageNameSubstitutor] (build-14) Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+17:11:36 INFO  [or.te.ut.RegistryAuthLocator] (build-14) Credential helper/store (docker-credential-osxkeychain) does not have credentials for index.docker.io
+17:11:42 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Starting to pull image
+17:11:42 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+17:11:46 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Pulling image layers:  2 pending,  1 downloaded,  0 extracted, (922 KB/? MB)
+17:11:48 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Pulling image layers:  1 pending,  2 downloaded,  0 extracted, (4 MB/? MB)
+17:11:48 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Pulling image layers:  0 pending,  3 downloaded,  0 extracted, (4 MB/4 MB)
+17:11:48 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Pulling image layers:  0 pending,  3 downloaded,  1 extracted, (4 MB/4 MB)
+17:11:48 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Pulling image layers:  0 pending,  3 downloaded,  2 extracted, (4 MB/4 MB)
+17:11:48 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Pulling image layers:  0 pending,  3 downloaded,  3 extracted, (4 MB/4 MB)
+17:11:48 INFO  [or.te.DockerClientFactory] (docker-java-stream--1009844202) Pull complete. 3 layers, pulled in 5s (downloaded 4 MB at 1016 KB/s)
+17:11:48 INFO  [or.te.DockerClientFactory] (build-14) Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+17:11:48 INFO  [or.te.DockerClientFactory] (build-14) Checking the system...
+17:11:48 INFO  [or.te.DockerClientFactory] (build-14) ✔︎ Docker server version should be at least 1.6.0
+17:11:48 INFO  [or.te.DockerClientFactory] (build-14) ✔︎ Docker environment should have more than 2GB free disk space
+17:11:48 INFO  [🐳.0.24]] (build-14) Pulling docker image: mysql:8.0.24. Please be patient; this may take some time but only needs to be done once.
+17:11:54 INFO  [🐳.0.24]] (docker-java-stream--434483644) Starting to pull image
+17:11:54 INFO  [🐳.0.24]] (docker-java-stream--434483644) Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+17:12:07 INFO  [🐳.0.24]] (docker-java-stream-261060819) Starting to pull image
+17:12:07 INFO  [🐳.0.24]] (docker-java-stream-261060819) Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+17:12:11 INFO  [🐳.0.24]] (docker-java-stream-261060819) Pulling image layers: 11 pending,  1 downloaded,  0 extracted, (1 KB/? MB)
+17:12:12 INFO  [🐳.0.24]] (docker-java-stream-261060819) Pulling image layers: 10 pending,  2 downloaded,  0 extracted, (5 MB/? MB)
+17:12:13 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in SysVarResource.class, SysVarService.class.
+17:12:13 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+17:12:14 INFO  [🐳.0.24]] (docker-java-stream-261060819) Pulling image layers:  9 pending,  3 downloaded,  0 extracted, (9 MB/? MB)
+17:12:14 INFO  [io.quarkus] (Quarkus Main Thread) server1 stopped in 0.481s
+17:25:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+17:25:24 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+17:25:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+17:25:24 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 2.032s. Listening on: http://0.0.0.0:5935
+17:25:24 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+17:25:24 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+17:25:31 INFO  [io.qu.sc.ru.de.SchedulerDevConsoleRecorder] (vert.x-eventloop-thread-19) Scheduler paused job with identity 'demo-task' via Dev UI
+17:25:34 INFO  [io.qu.sc.ru.de.SchedulerDevConsoleRecorder] (vert.x-eventloop-thread-5) Scheduler resumed job with identity 'demo-task'via Dev UI
+17:26:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+17:27:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-6) This is demo task
+17:28:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-8) This is demo task
+17:28:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+17:29:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-11) This is demo task
+17:30:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-13) This is demo task
+17:31:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+17:31:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-17) This is demo quartz task
+17:32:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-18) This is demo task
+17:33:21 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 非法授权: java.lang.RuntimeException: 非法授权
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:45)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:33:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-20) This is demo task
+17:33:52 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 非法授权: java.lang.RuntimeException: 非法授权
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:45)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:34:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-22) This is demo task
+17:34:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-24) This is demo quartz task
+17:35:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-25) This is demo task
+17:35:46 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 非法授权: java.lang.RuntimeException: 非法授权
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:45)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:36:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-3) This is demo task
+17:37:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+17:37:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-7) This is demo quartz task
+17:37:53 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 非法授权: java.lang.RuntimeException: 非法授权
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:45)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:38:02 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 非法授权: java.lang.RuntimeException: 非法授权
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:45)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:38:20 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 非法授权: java.lang.RuntimeException: 非法授权
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:45)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:38:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-6) This is demo task
+17:39:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+17:40:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-12) This is demo task
+17:40:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-14) This is demo quartz task
+17:40:53 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 非法授权: java.lang.RuntimeException: 非法授权
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:45)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:41:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-13) This is demo task
+17:42:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+17:43:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-18) This is demo task
+17:43:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-20) This is demo quartz task
+17:44:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-21) This is demo task
+17:45:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-23) This is demo task
+17:45:29 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 非法授权: java.lang.RuntimeException: 非法授权
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:45)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:45:31 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:45:31 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:45:39 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:46:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-25) This is demo task
+17:46:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-2) This is demo quartz task
+17:47:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-3) This is demo task
+17:48:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+17:49:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-6) This is demo task
+17:49:24 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+17:50:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+17:51:24 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-11) This is demo task
+17:52:02 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in SysUserResource.class, SessionContext.class, SysAuthResource.class.
+17:52:02 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+17:52:02 INFO  [io.quarkus] (Quarkus Main Thread) server1 stopped in 0.536s
+17:52:03 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+17:52:03 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+17:52:03 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+17:52:03 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 0.690s. Listening on: http://0.0.0.0:5935
+17:52:03 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+17:52:03 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+17:52:03 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload total time: 1.833s 
+17:52:03 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:52:58 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:53:03 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+17:54:03 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+17:54:37 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in SysUserService.class, LoginParam.class.
+17:54:37 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+17:54:38 INFO  [io.quarkus] (Quarkus Main Thread) server1 stopped in 0.520s
+17:54:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+17:54:38 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+17:54:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+17:54:38 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 0.661s. Listening on: http://0.0.0.0:5935
+17:54:38 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+17:54:38 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+17:54:38 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload total time: 1.503s 
+17:54:38 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+17:55:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+17:55:41 INFO  [xy.ea.li.AppLifecycleBean] (Shutdown thread) The application is stopping...
+17:55:41 INFO  [io.quarkus] (Shutdown thread) server1 stopped in 0.353s
+17:55:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+17:55:46 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+17:55:46 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+17:55:46 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 1.782s. Listening on: http://0.0.0.0:5935
+17:55:46 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+17:55:46 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+17:56:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+17:57:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-6) This is demo task
+17:58:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-8) This is demo task
+17:58:46 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+17:59:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-11) This is demo task
+18:00:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-13) This is demo task
+18:01:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+18:01:46 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-17) This is demo quartz task
+18:02:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-18) This is demo task
+18:03:16 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+18:03:39 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+18:03:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-20) This is demo task
+18:03:54 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+18:03:54 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+18:03:54 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+18:03:54 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+18:03:54 ERROR [io.qu.ru.Application] (Quarkus Main Thread) Port 5935 seems to be in use by another process. Quarkus may already be running or the port is used by another application.
+18:03:54 WARN  [io.qu.ru.Application] (Quarkus Main Thread) Use 'netstat -anv | grep 5935' to identify the process occupying the port.
+18:03:54 WARN  [io.qu.ru.Application] (Quarkus Main Thread) You can try to kill it with 'kill -9 <pid>'.
+18:04:45 INFO  [xy.ea.li.AppLifecycleBean] (Shutdown thread) The application is stopping...
+18:04:45 ERROR [io.qu.ve.ht.ru.de.DevConsoleRecorder] (Shutdown thread) Error cleaning up DEV Console temporary directory: /var/folders/mq/z0xg46217w3b211g9jxdkwnm0000gn/T/quarkus/xyz.easyboot/server/io.quarkus/quarkus-vertx-http-deployment/2.3.0.Final: java.nio.file.NoSuchFileException: /var/folders/mq/z0xg46217w3b211g9jxdkwnm0000gn/T/quarkus/xyz.easyboot/server/io.quarkus/quarkus-vertx-http-deployment/2.3.0.Final
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+	at java.base/java.nio.file.FileTreeWalker.getAttributes(FileTreeWalker.java:219)
+	at java.base/java.nio.file.FileTreeWalker.visit(FileTreeWalker.java:276)
+	at java.base/java.nio.file.FileTreeWalker.walk(FileTreeWalker.java:322)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2717)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2797)
+	at io.quarkus.vertx.http.runtime.devmode.DevConsoleRecorder$CleanupDevConsoleTempDirectory.run(DevConsoleRecorder.java:73)
+	at io.quarkus.runtime.StartupContext.runAllInReverseOrder(StartupContext.java:83)
+	at io.quarkus.runtime.StartupContext.close(StartupContext.java:72)
+	at io.quarkus.runner.ApplicationImpl.doStop(ApplicationImpl.zig:1066)
+	at io.quarkus.runtime.Application.stop(Application.java:203)
+	at io.quarkus.runtime.Application.stop(Application.java:155)
+	at io.quarkus.runtime.ApplicationLifecycleManager$ShutdownHookThread.run(ApplicationLifecycleManager.java:401)
+
+18:04:45 INFO  [io.quarkus] (Shutdown thread) server1 stopped in 0.546s
+18:04:59 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+18:04:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+18:04:59 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+18:04:59 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 1.809s. Listening on: http://0.0.0.0:5935
+18:04:59 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+18:04:59 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+18:05:20 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+18:05:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+18:06:53 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) No Authorization: java.lang.RuntimeException: No Authorization
+	at xyz.easyboot.handler.AuthorizationFilter.filter(AuthorizationFilter.java:41)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:312)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+18:06:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-6) This is demo task
+18:07:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-8) This is demo task
+18:07:59 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+18:08:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-11) This is demo task
+18:09:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-13) This is demo task
+18:10:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+18:10:59 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-17) This is demo quartz task
+18:11:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-18) This is demo task
+18:12:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-20) This is demo task
+18:13:59 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-22) This is demo task
+18:13:59 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-24) This is demo quartz task
+18:14:34 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in GlobalExceptionMapper.class, AuthorizationFilter.class.
+18:14:34 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+18:14:34 INFO  [io.quarkus] (Quarkus Main Thread) server1 stopped in 0.511s
+18:14:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+18:14:35 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+18:14:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+18:14:35 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 0.722s. Listening on: http://0.0.0.0:5935
+18:14:35 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+18:14:35 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+18:14:35 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload total time: 1.741s 
+18:15:04 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Application restart not required, replacing classes via instrumentation
+18:15:04 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload performed via instrumentation, no restart needed, total time: 0.277s 
+18:15:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+18:16:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+18:17:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+18:17:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+18:18:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-12) This is demo task
+18:19:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+18:20:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-17) This is demo quartz task
+18:20:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-16) This is demo task
+18:21:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-19) This is demo task
+18:22:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-21) This is demo task
+18:23:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-24) This is demo quartz task
+18:23:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-23) This is demo task
+18:24:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+18:25:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-3) This is demo task
+18:26:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-6) This is demo quartz task
+18:26:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+18:27:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+18:28:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-8) This is demo task
+18:29:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-14) This is demo quartz task
+18:29:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-12) This is demo task
+18:30:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-17) This is demo task
+18:47:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+18:47:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-19) This is demo quartz task
+19:04:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-21) This is demo task
+19:05:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-24) This is demo task
+19:05:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-23) This is demo quartz task
+19:23:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+19:23:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-25) This is demo quartz task
+19:24:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+19:40:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+19:49:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+19:50:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-8) This is demo task
+19:50:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+19:51:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+19:57:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-17) This is demo task
+19:58:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-19) This is demo task
+20:08:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-21) This is demo quartz task
+20:08:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-16) This is demo task
+20:09:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-24) This is demo task
+20:27:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-20) This is demo task
+20:28:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+20:34:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+20:35:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-6) This is demo quartz task
+20:35:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+20:36:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+20:37:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-10) This is demo task
+20:38:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+20:38:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-12) This is demo quartz task
+20:39:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-17) This is demo task
+20:40:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-13) This is demo task
+20:41:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+20:41:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-16) This is demo quartz task
+20:42:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-18) This is demo task
+20:43:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-23) This is demo task
+20:44:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+20:44:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-1) This is demo quartz task
+20:45:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-6) This is demo task
+20:46:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-3) This is demo task
+20:47:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+20:47:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-8) This is demo quartz task
+20:48:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+20:49:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+20:50:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-11) This is demo task
+20:50:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-13) This is demo quartz task
+20:51:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+20:52:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-16) This is demo task
+20:53:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-18) This is demo task
+20:53:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-20) This is demo quartz task
+20:54:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+20:55:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-25) This is demo task
+20:56:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+20:56:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-22) This is demo task
+20:57:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+20:58:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-8) This is demo task
+20:59:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-7) This is demo quartz task
+20:59:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+21:00:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-17) This is demo task
+21:01:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-13) This is demo task
+21:02:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-19) This is demo task
+21:02:35 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-21) This is demo quartz task
+21:03:35 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-20) This is demo task
+21:04:18 WARNING [or.ae.re.tt.te.TerminalConnection] (Shutdown thread) Failed to write out.: java.io.IOException: Input/output error
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:341)
+	at org.aesh.readline.tty.terminal.TerminalConnection.write(TerminalConnection.java:270)
+	at org.aesh.terminal.io.Encoder.accept(Encoder.java:52)
+	at org.aesh.terminal.io.Encoder.accept(Encoder.java:31)
+	at org.aesh.terminal.Connection.write(Connection.java:146)
+	at io.quarkus.deployment.console.AeshConsole.deadlockSafeWrite(AeshConsole.java:169)
+	at io.quarkus.deployment.console.AeshConsole.write(AeshConsole.java:384)
+	at io.quarkus.deployment.console.AeshConsole.write(AeshConsole.java:388)
+	at io.quarkus.dev.console.RedirectPrintStream.write(RedirectPrintStream.java:20)
+	at org.jboss.logmanager.handlers.UncloseableOutputStream.write(UncloseableOutputStream.java:41)
+	at org.jboss.logmanager.handlers.UncloseableOutputStream.write(UncloseableOutputStream.java:41)
+	at org.jboss.logmanager.handlers.UninterruptibleOutputStream.write(UninterruptibleOutputStream.java:81)
+	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:233)
+	at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:312)
+	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:316)
+	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:153)
+	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:251)
+	at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:257)
+	at org.jboss.logmanager.handlers.WriterHandler.safeFlush(WriterHandler.java:165)
+	at org.jboss.logmanager.handlers.WriterHandler.flush(WriterHandler.java:135)
+	at org.jboss.logmanager.ExtHandler.doPublish(ExtHandler.java:113)
+	at org.jboss.logmanager.handlers.WriterHandler.doPublish(WriterHandler.java:64)
+	at org.jboss.logmanager.ExtHandler.publish(ExtHandler.java:66)
+	at io.quarkus.deployment.logging.LoggingResourceProcessor$2.accept(LoggingResourceProcessor.java:245)
+	at io.quarkus.deployment.logging.LoggingResourceProcessor$2.accept(LoggingResourceProcessor.java:223)
+	at io.quarkus.runtime.logging.LoggingSetupRecorder$5.publish(LoggingSetupRecorder.java:431)
+	at org.jboss.logmanager.ExtHandler.publishToNestedHandlers(ExtHandler.java:97)
+	at io.quarkus.bootstrap.logging.QuarkusDelayedHandler.doPublish(QuarkusDelayedHandler.java:73)
+	at org.jboss.logmanager.ExtHandler.publish(ExtHandler.java:66)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:334)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.Logger.logRaw(Logger.java:750)
+	at org.jboss.logmanager.Logger.log(Logger.java:708)
+	at org.jboss.logmanager.Logger.log(Logger.java:721)
+	at org.jboss.logging.JBossLogManagerLogger.doLog(JBossLogManagerLogger.java:42)
+	at org.jboss.logging.Logger.info(Logger.java:955)
+	at xyz.easyboot.lifecycle.AppLifecycleBean.onStop(AppLifecycleBean.java:34)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass.onStop$$superforward1(AppLifecycleBean_Subclass.zig:137)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass$$function$$4.apply(AppLifecycleBean_Subclass$$function$$4.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass.onStop(AppLifecycleBean_Subclass.zig:292)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Observer_onStop_a7d706cbdf99711cb5dda67189ced7f36529b6b8.notify(AppLifecycleBean_Observer_onStop_a7d706cbdf99711cb5dda67189ced7f36529b6b8.zig:147)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notifyObservers(EventImpl.java:322)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notify(EventImpl.java:304)
+	at io.quarkus.arc.impl.EventImpl.fire(EventImpl.java:73)
+	at io.quarkus.arc.runtime.ArcRecorder.fireLifecycleEvent(ArcRecorder.java:128)
+	at io.quarkus.arc.runtime.ArcRecorder$2.run(ArcRecorder.java:102)
+	at io.quarkus.runtime.StartupContext.runAllInReverseOrder(StartupContext.java:83)
+	at io.quarkus.runtime.StartupContext.close(StartupContext.java:72)
+	at io.quarkus.runner.ApplicationImpl.doStop(ApplicationImpl.zig:1068)
+	at io.quarkus.runtime.Application.stop(Application.java:203)
+	at io.quarkus.runtime.Application.stop(Application.java:155)
+	at io.quarkus.runtime.ApplicationLifecycleManager$ShutdownHookThread.run(ApplicationLifecycleManager.java:401)
+
+21:04:18 WARNING [or.ae.re.tt.te.TerminalConnection] (Shutdown thread) Failed to write out.: java.io.IOException: Input/output error
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:341)
+	at org.aesh.readline.tty.terminal.TerminalConnection.write(TerminalConnection.java:270)
+	at org.aesh.terminal.io.Encoder.accept(Encoder.java:52)
+	at org.aesh.terminal.io.Encoder.accept(Encoder.java:31)
+	at org.aesh.terminal.Connection.write(Connection.java:146)
+	at io.quarkus.deployment.console.AeshConsole.deadlockSafeWrite(AeshConsole.java:169)
+	at io.quarkus.deployment.console.AeshConsole.write(AeshConsole.java:384)
+	at io.quarkus.deployment.console.AeshConsole.write(AeshConsole.java:388)
+	at io.quarkus.dev.console.RedirectPrintStream.write(RedirectPrintStream.java:20)
+	at org.jboss.logmanager.handlers.UncloseableOutputStream.write(UncloseableOutputStream.java:41)
+	at org.jboss.logmanager.handlers.UncloseableOutputStream.write(UncloseableOutputStream.java:41)
+	at org.jboss.logmanager.handlers.UninterruptibleOutputStream.write(UninterruptibleOutputStream.java:81)
+	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:233)
+	at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:312)
+	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:316)
+	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:153)
+	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:251)
+	at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:257)
+	at org.jboss.logmanager.handlers.WriterHandler.safeFlush(WriterHandler.java:165)
+	at org.jboss.logmanager.handlers.WriterHandler.flush(WriterHandler.java:135)
+	at org.jboss.logmanager.ExtHandler.doPublish(ExtHandler.java:113)
+	at org.jboss.logmanager.handlers.WriterHandler.doPublish(WriterHandler.java:64)
+	at org.jboss.logmanager.ExtHandler.publish(ExtHandler.java:66)
+	at io.quarkus.deployment.logging.LoggingResourceProcessor$2.accept(LoggingResourceProcessor.java:245)
+	at io.quarkus.deployment.logging.LoggingResourceProcessor$2.accept(LoggingResourceProcessor.java:223)
+	at io.quarkus.runtime.logging.LoggingSetupRecorder$5.publish(LoggingSetupRecorder.java:431)
+	at org.jboss.logmanager.ExtHandler.publishToNestedHandlers(ExtHandler.java:97)
+	at io.quarkus.bootstrap.logging.QuarkusDelayedHandler.doPublish(QuarkusDelayedHandler.java:73)
+	at org.jboss.logmanager.ExtHandler.publish(ExtHandler.java:66)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:334)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.Logger.logRaw(Logger.java:750)
+	at org.jboss.logmanager.Logger.log(Logger.java:708)
+	at org.jboss.logmanager.Logger.log(Logger.java:721)
+	at org.jboss.logging.JBossLogManagerLogger.doLog(JBossLogManagerLogger.java:42)
+	at org.jboss.logging.Logger.info(Logger.java:955)
+	at xyz.easyboot.lifecycle.AppLifecycleBean.onStop(AppLifecycleBean.java:34)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass.onStop$$superforward1(AppLifecycleBean_Subclass.zig:137)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass$$function$$4.apply(AppLifecycleBean_Subclass$$function$$4.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass.onStop(AppLifecycleBean_Subclass.zig:292)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Observer_onStop_a7d706cbdf99711cb5dda67189ced7f36529b6b8.notify(AppLifecycleBean_Observer_onStop_a7d706cbdf99711cb5dda67189ced7f36529b6b8.zig:147)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notifyObservers(EventImpl.java:322)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notify(EventImpl.java:304)
+	at io.quarkus.arc.impl.EventImpl.fire(EventImpl.java:73)
+	at io.quarkus.arc.runtime.ArcRecorder.fireLifecycleEvent(ArcRecorder.java:128)
+	at io.quarkus.arc.runtime.ArcRecorder$2.run(ArcRecorder.java:102)
+	at io.quarkus.runtime.StartupContext.runAllInReverseOrder(StartupContext.java:83)
+	at io.quarkus.runtime.StartupContext.close(StartupContext.java:72)
+	at io.quarkus.runner.ApplicationImpl.doStop(ApplicationImpl.zig:1068)
+	at io.quarkus.runtime.Application.stop(Application.java:203)
+	at io.quarkus.runtime.Application.stop(Application.java:155)
+	at io.quarkus.runtime.ApplicationLifecycleManager$ShutdownHookThread.run(ApplicationLifecycleManager.java:401)
+
+21:04:18 WARNING [or.ae.re.tt.te.TerminalConnection] (Shutdown thread) Failed to write out.: java.io.IOException: Input/output error
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:341)
+	at org.aesh.readline.tty.terminal.TerminalConnection.write(TerminalConnection.java:270)
+	at org.aesh.terminal.io.Encoder.accept(Encoder.java:52)
+	at org.aesh.terminal.io.Encoder.accept(Encoder.java:31)
+	at org.aesh.terminal.Connection.write(Connection.java:146)
+	at io.quarkus.deployment.console.AeshConsole.deadlockSafeWrite(AeshConsole.java:169)
+	at io.quarkus.deployment.console.AeshConsole.write(AeshConsole.java:384)
+	at io.quarkus.deployment.console.AeshConsole.write(AeshConsole.java:388)
+	at io.quarkus.dev.console.RedirectPrintStream.write(RedirectPrintStream.java:20)
+	at org.jboss.logmanager.handlers.UncloseableOutputStream.write(UncloseableOutputStream.java:41)
+	at org.jboss.logmanager.handlers.UncloseableOutputStream.write(UncloseableOutputStream.java:41)
+	at org.jboss.logmanager.handlers.UninterruptibleOutputStream.write(UninterruptibleOutputStream.java:81)
+	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:233)
+	at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:312)
+	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:316)
+	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:153)
+	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:251)
+	at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:257)
+	at org.jboss.logmanager.handlers.WriterHandler.safeFlush(WriterHandler.java:165)
+	at org.jboss.logmanager.handlers.WriterHandler.flush(WriterHandler.java:135)
+	at org.jboss.logmanager.ExtHandler.doPublish(ExtHandler.java:113)
+	at org.jboss.logmanager.handlers.WriterHandler.doPublish(WriterHandler.java:64)
+	at org.jboss.logmanager.ExtHandler.publish(ExtHandler.java:66)
+	at io.quarkus.deployment.logging.LoggingResourceProcessor$2.accept(LoggingResourceProcessor.java:245)
+	at io.quarkus.deployment.logging.LoggingResourceProcessor$2.accept(LoggingResourceProcessor.java:223)
+	at io.quarkus.runtime.logging.LoggingSetupRecorder$5.publish(LoggingSetupRecorder.java:431)
+	at org.jboss.logmanager.ExtHandler.publishToNestedHandlers(ExtHandler.java:97)
+	at io.quarkus.bootstrap.logging.QuarkusDelayedHandler.doPublish(QuarkusDelayedHandler.java:73)
+	at org.jboss.logmanager.ExtHandler.publish(ExtHandler.java:66)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:334)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.Logger.logRaw(Logger.java:750)
+	at org.jboss.logmanager.Logger.log(Logger.java:708)
+	at org.jboss.logmanager.Logger.log(Logger.java:721)
+	at org.jboss.logging.JBossLogManagerLogger.doLog(JBossLogManagerLogger.java:42)
+	at org.jboss.logging.Logger.info(Logger.java:955)
+	at xyz.easyboot.lifecycle.AppLifecycleBean.onStop(AppLifecycleBean.java:34)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass.onStop$$superforward1(AppLifecycleBean_Subclass.zig:137)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass$$function$$4.apply(AppLifecycleBean_Subclass$$function$$4.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Subclass.onStop(AppLifecycleBean_Subclass.zig:292)
+	at xyz.easyboot.lifecycle.AppLifecycleBean_Observer_onStop_a7d706cbdf99711cb5dda67189ced7f36529b6b8.notify(AppLifecycleBean_Observer_onStop_a7d706cbdf99711cb5dda67189ced7f36529b6b8.zig:147)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notifyObservers(EventImpl.java:322)
+	at io.quarkus.arc.impl.EventImpl$Notifier.notify(EventImpl.java:304)
+	at io.quarkus.arc.impl.EventImpl.fire(EventImpl.java:73)
+	at io.quarkus.arc.runtime.ArcRecorder.fireLifecycleEvent(ArcRecorder.java:128)
+	at io.quarkus.arc.runtime.ArcRecorder$2.run(ArcRecorder.java:102)
+	at io.quarkus.runtime.StartupContext.runAllInReverseOrder(StartupContext.java:83)
+	at io.quarkus.runtime.StartupContext.close(StartupContext.java:72)
+	at io.quarkus.runner.ApplicationImpl.doStop(ApplicationImpl.zig:1068)
+	at io.quarkus.runtime.Application.stop(Application.java:203)
+	at io.quarkus.runtime.Application.stop(Application.java:155)
+	at io.quarkus.runtime.ApplicationLifecycleManager$ShutdownHookThread.run(ApplicationLifecycleManager.java:401)
+
+21:04:18 INFO  [xy.ea.li.AppLifecycleBean] (Shutdown thread) The application is stopping...
+21:04:19 WARNING [or.ae.re.tt.te.TerminalConnection] (Shutdown thread) Failed to write out.: java.io.IOException: Input/output error
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:341)
+	at org.aesh.readline.tty.terminal.TerminalConnection.write(TerminalConnection.java:270)
+	at org.aesh.terminal.io.Encoder.accept(Encoder.java:52)
+	at org.aesh.terminal.io.Encoder.accept(Encoder.java:31)
+	at org.aesh.terminal.Connection.write(Connection.java:146)
+	at io.quarkus.deployment.console.AeshConsole.write(AeshConsole.java:303)
+	at io.quarkus.deployment.console.AeshConsole.write(AeshConsole.java:388)
+	at io.quarkus.dev.console.RedirectPrintStream.write(RedirectPrintStream.java:20)
+	at org.jboss.logmanager.handlers.UncloseableOutputStream.write(UncloseableOutputStream.java:41)
+	at org.jboss.logmanager.handlers.UncloseableOutputStream.write(UncloseableOutputStream.java:41)
+	at org.jboss.logmanager.handlers.UninterruptibleOutputStream.write(UninterruptibleOutputStream.java:81)
+	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:233)
+	at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:312)
+	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:316)
+	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:153)
+	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:251)
+	at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:257)
+	at org.jboss.logmanager.handlers.WriterHandler.safeFlush(WriterHandler.java:165)
+	at org.jboss.logmanager.handlers.WriterHandler.flush(WriterHandler.java:135)
+	at org.jboss.logmanager.ExtHandler.doPublish(ExtHandler.java:113)
+	at org.jboss.logmanager.handlers.WriterHandler.doPublish(WriterHandler.java:64)
+	at org.jboss.logmanager.ExtHandler.publish(ExtHandler.java:66)
+	at io.quarkus.deployment.logging.LoggingResourceProcessor$2.accept(LoggingResourceProcessor.java:245)
+	at io.quarkus.deployment.logging.LoggingResourceProcessor$2.accept(LoggingResourceProcessor.java:223)
+	at io.quarkus.runtime.logging.LoggingSetupRecorder$5.publish(LoggingSetupRecorder.java:431)
+	at org.jboss.logmanager.ExtHandler.publishToNestedHandlers(ExtHandler.java:97)
+	at io.quarkus.bootstrap.logging.QuarkusDelayedHandler.doPublish(QuarkusDelayedHandler.java:73)
+	at org.jboss.logmanager.ExtHandler.publish(ExtHandler.java:66)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:334)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.LoggerNode.publish(LoggerNode.java:341)
+	at org.jboss.logmanager.Logger.logRaw(Logger.java:750)
+	at org.jboss.logmanager.Logger.log(Logger.java:708)
+	at org.jboss.logging.JBossLogManagerLogger.doLogf(JBossLogManagerLogger.java:53)
+	at org.jboss.logging.Logger.infof(Logger.java:1149)
+	at io.quarkus.bootstrap.runner.Timing.printStopTime(Timing.java:115)
+	at io.quarkus.runtime.Application.stop(Application.java:220)
+	at io.quarkus.runtime.Application.stop(Application.java:155)
+	at io.quarkus.runtime.ApplicationLifecycleManager$ShutdownHookThread.run(ApplicationLifecycleManager.java:401)
+
+21:04:19 INFO  [io.quarkus] (Shutdown thread) server1 stopped in 0.528s
+21:19:26 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+21:19:26 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+21:19:26 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+21:19:26 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 1.887s. Listening on: http://0.0.0.0:5935
+21:19:26 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+21:19:26 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+21:20:26 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+21:20:30 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) File change detected: /Users/wuu/Projects/indie-hacker/quarkus-vue-admin/server/src/main/resources/application.properties
+21:20:30 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in application.properties.
+21:20:30 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+21:20:31 INFO  [io.quarkus] (Quarkus Main Thread) server1 stopped in 0.514s
+21:20:31 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+21:20:31 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+21:20:31 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+21:20:31 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 0.608s. Listening on: http://0.0.0.0:5935
+21:20:31 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+21:20:31 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+21:20:31 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload total time: 1.145s 
+21:20:35 INFO  [xy.ea.ha.LoggingFilter] (executor-thread-0) Request POST /auth/login from IP 0:0:0:0:0:0:0:1:53102
+21:20:35 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 验证码已过期: java.lang.RuntimeException: 验证码已过期
+	at xyz.easyboot.web.system.service.SysUserService.login(SysUserService.java:52)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login$$superforward1(SysUserService_Subclass.zig:436)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass$$function$$14.apply(SysUserService_Subclass$$function$$14.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:50)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:132)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:103)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:57)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(TransactionalInterceptorRequired_Bean.zig:340)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login(SysUserService_Subclass.zig:1056)
+	at xyz.easyboot.web.system.service.SysUserService_ClientProxy.login(SysUserService_ClientProxy.zig:284)
+	at xyz.easyboot.web.system.resource.SysAuthResource.login(SysAuthResource.java:30)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login$$superforward1(SysAuthResource_Subclass.zig:302)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass$$function$$7.apply(SysAuthResource_Subclass$$function$$7.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login(SysAuthResource_Subclass.zig:556)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+21:20:47 INFO  [xy.ea.ha.LoggingFilter] (executor-thread-0) Request POST /auth/login from IP 0:0:0:0:0:0:0:1:53102
+21:20:47 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 验证码已过期: java.lang.RuntimeException: 验证码已过期
+	at xyz.easyboot.web.system.service.SysUserService.login(SysUserService.java:52)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login$$superforward1(SysUserService_Subclass.zig:436)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass$$function$$14.apply(SysUserService_Subclass$$function$$14.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:50)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:132)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:103)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:57)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(TransactionalInterceptorRequired_Bean.zig:340)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login(SysUserService_Subclass.zig:1056)
+	at xyz.easyboot.web.system.service.SysUserService_ClientProxy.login(SysUserService_ClientProxy.zig:284)
+	at xyz.easyboot.web.system.resource.SysAuthResource.login(SysAuthResource.java:30)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login$$superforward1(SysAuthResource_Subclass.zig:302)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass$$function$$7.apply(SysAuthResource_Subclass$$function$$7.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login(SysAuthResource_Subclass.zig:556)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+21:21:31 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+21:22:31 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+21:23:31 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+21:23:31 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+21:24:31 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-12) This is demo task
+21:25:17 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) File change detected: /Users/wuu/Projects/indie-hacker/quarkus-vue-admin/server/src/main/resources/application.properties
+21:25:17 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in application.properties, SysUserService.class, AuthorizationConfig.class.
+21:25:17 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+21:25:17 INFO  [io.quarkus] (Quarkus Main Thread) server1 stopped in 0.537s
+21:25:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+21:25:18 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+21:25:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+21:25:18 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 0.698s. Listening on: http://0.0.0.0:5935
+21:25:18 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+21:25:18 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+21:25:18 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload total time: 1.863s 
+21:25:18 INFO  [xy.ea.ha.LoggingFilter] (executor-thread-0) Request POST /auth/login from IP 0:0:0:0:0:0:0:1:53102
+21:25:18 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 账户名或密码错误: java.lang.RuntimeException: 账户名或密码错误
+	at xyz.easyboot.web.system.service.SysUserService.login(SysUserService.java:68)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login$$superforward1(SysUserService_Subclass.zig:436)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass$$function$$21.apply(SysUserService_Subclass$$function$$21.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:50)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:132)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:103)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:57)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(TransactionalInterceptorRequired_Bean.zig:340)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login(SysUserService_Subclass.zig:1056)
+	at xyz.easyboot.web.system.service.SysUserService_ClientProxy.login(SysUserService_ClientProxy.zig:284)
+	at xyz.easyboot.web.system.resource.SysAuthResource.login(SysAuthResource.java:30)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login$$superforward1(SysAuthResource_Subclass.zig:302)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass$$function$$11.apply(SysAuthResource_Subclass$$function$$11.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login(SysAuthResource_Subclass.zig:556)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+21:25:24 INFO  [xy.ea.ha.LoggingFilter] (executor-thread-0) Request POST /auth/login from IP 0:0:0:0:0:0:0:1:53102
+21:25:24 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 账户名或密码错误: java.lang.RuntimeException: 账户名或密码错误
+	at xyz.easyboot.web.system.service.SysUserService.login(SysUserService.java:68)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login$$superforward1(SysUserService_Subclass.zig:436)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass$$function$$21.apply(SysUserService_Subclass$$function$$21.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:50)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:132)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:103)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:57)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(TransactionalInterceptorRequired_Bean.zig:340)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login(SysUserService_Subclass.zig:1056)
+	at xyz.easyboot.web.system.service.SysUserService_ClientProxy.login(SysUserService_ClientProxy.zig:284)
+	at xyz.easyboot.web.system.resource.SysAuthResource.login(SysAuthResource.java:30)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login$$superforward1(SysAuthResource_Subclass.zig:302)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass$$function$$11.apply(SysAuthResource_Subclass$$function$$11.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login(SysAuthResource_Subclass.zig:556)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+21:25:28 INFO  [xy.ea.ha.LoggingFilter] (executor-thread-0) Request POST /auth/login from IP 0:0:0:0:0:0:0:1:53102
+21:25:28 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 账户名或密码错误: java.lang.RuntimeException: 账户名或密码错误
+	at xyz.easyboot.web.system.service.SysUserService.login(SysUserService.java:68)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login$$superforward1(SysUserService_Subclass.zig:436)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass$$function$$21.apply(SysUserService_Subclass$$function$$21.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:50)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:132)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:103)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:57)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(TransactionalInterceptorRequired_Bean.zig:340)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login(SysUserService_Subclass.zig:1056)
+	at xyz.easyboot.web.system.service.SysUserService_ClientProxy.login(SysUserService_ClientProxy.zig:284)
+	at xyz.easyboot.web.system.resource.SysAuthResource.login(SysAuthResource.java:30)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login$$superforward1(SysAuthResource_Subclass.zig:302)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass$$function$$11.apply(SysAuthResource_Subclass$$function$$11.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login(SysAuthResource_Subclass.zig:556)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+21:26:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+21:27:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+21:28:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+21:28:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+21:29:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-12) This is demo task
+21:30:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+21:31:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-16) This is demo task
+21:31:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-17) This is demo quartz task
+21:32:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-19) This is demo task
+21:33:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-21) This is demo task
+21:34:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-23) This is demo task
+21:34:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-24) This is demo quartz task
+21:35:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+21:36:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-3) This is demo task
+21:37:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+21:37:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-7) This is demo quartz task
+21:38:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-10) This is demo task
+21:39:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-8) This is demo task
+21:40:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-14) This is demo quartz task
+21:40:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-11) This is demo task
+21:41:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-16) This is demo task
+21:42:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+21:43:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-21) This is demo quartz task
+21:43:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-18) This is demo task
+21:44:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-23) This is demo task
+21:45:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-22) This is demo task
+21:46:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-25) This is demo task
+21:46:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+21:47:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+21:48:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+21:49:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-8) This is demo quartz task
+21:49:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-6) This is demo task
+21:50:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+21:51:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-12) This is demo task
+21:52:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-15) This is demo quartz task
+21:52:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-13) This is demo task
+21:53:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-21) This is demo task
+21:54:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-19) This is demo task
+21:55:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-20) This is demo task
+21:55:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-22) This is demo quartz task
+21:56:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+21:57:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-3) This is demo task
+21:58:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-5) This is demo quartz task
+21:58:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+21:59:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-8) This is demo task
+22:00:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-10) This is demo task
+22:01:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+22:01:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-12) This is demo quartz task
+22:02:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-15) This is demo task
+22:03:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-13) This is demo task
+22:04:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-19) This is demo quartz task
+22:04:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-17) This is demo task
+22:05:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-22) This is demo task
+22:06:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-23) This is demo task
+22:07:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-24) This is demo task
+22:07:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-25) This is demo quartz task
+22:08:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+22:09:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+22:10:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+22:10:18 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+22:11:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+22:12:18 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+22:12:46 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+22:12:46 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+22:12:46 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+22:12:46 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 2.264s. Listening on: http://0.0.0.0:5935
+22:12:46 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+22:12:46 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+22:12:47 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+22:12:47 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+22:12:47 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+22:12:47 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+22:12:47 ERROR [io.qu.ru.Application] (Quarkus Main Thread) Port 5935 seems to be in use by another process. Quarkus may already be running or the port is used by another application.
+22:12:47 WARN  [io.qu.ru.Application] (Quarkus Main Thread) Use 'netstat -anv | grep 5935' to identify the process occupying the port.
+22:12:47 WARN  [io.qu.ru.Application] (Quarkus Main Thread) You can try to kill it with 'kill -9 <pid>'.
+22:13:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+22:13:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+22:13:38 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+22:13:38 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 2.022s. Listening on: http://0.0.0.0:5935
+22:13:38 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+22:13:38 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+22:14:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-5) This is demo task
+22:15:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+22:16:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+22:16:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+22:17:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-12) This is demo task
+22:18:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-14) This is demo task
+22:19:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-16) This is demo task
+22:19:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-17) This is demo quartz task
+22:20:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-19) This is demo task
+22:21:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-21) This is demo task
+22:22:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-23) This is demo task
+22:22:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-24) This is demo quartz task
+22:23:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-3) This is demo task
+22:23:47 INFO  [xy.ea.ha.LoggingFilter] (executor-thread-0) Request POST /auth/login from IP 0:0:0:0:0:0:0:1:61470
+22:23:47 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 账户名或密码错误: java.lang.RuntimeException: 账户名或密码错误
+	at xyz.easyboot.web.system.service.SysUserService.login(SysUserService.java:68)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login$$superforward1(SysUserService_Subclass.zig:436)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass$$function$$7.apply(SysUserService_Subclass$$function$$7.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:50)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:132)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:103)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:57)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(TransactionalInterceptorRequired_Bean.zig:340)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login(SysUserService_Subclass.zig:1056)
+	at xyz.easyboot.web.system.service.SysUserService_ClientProxy.login(SysUserService_ClientProxy.zig:284)
+	at xyz.easyboot.web.system.resource.SysAuthResource.login(SysAuthResource.java:30)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login$$superforward1(SysAuthResource_Subclass.zig:302)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass$$function$$3.apply(SysAuthResource_Subclass$$function$$3.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login(SysAuthResource_Subclass.zig:556)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+22:24:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-1) This is demo task
+22:25:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+22:25:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-7) This is demo quartz task
+22:26:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-9) This is demo task
+22:27:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-10) This is demo task
+22:28:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-11) This is demo task
+22:28:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-14) This is demo quartz task
+22:29:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-16) This is demo task
+22:30:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-17) This is demo task
+22:31:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-18) This is demo task
+22:31:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-21) This is demo quartz task
+22:32:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-23) This is demo task
+22:32:54 INFO  [xy.ea.ha.LoggingFilter] (executor-thread-0) Request POST /auth/login from IP 0:0:0:0:0:0:0:1:55948
+22:32:54 ERROR [xy.ea.ha.GlobalExceptionMapper] (executor-thread-0) 账户名或密码错误: java.lang.RuntimeException: 账户名或密码错误
+	at xyz.easyboot.web.system.service.SysUserService.login(SysUserService.java:68)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login$$superforward1(SysUserService_Subclass.zig:436)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass$$function$$7.apply(SysUserService_Subclass$$function$$7.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:50)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:132)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:103)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:57)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(TransactionalInterceptorRequired_Bean.zig:340)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.service.SysUserService_Subclass.login(SysUserService_Subclass.zig:1056)
+	at xyz.easyboot.web.system.service.SysUserService_ClientProxy.login(SysUserService_ClientProxy.zig:284)
+	at xyz.easyboot.web.system.resource.SysAuthResource.login(SysAuthResource.java:30)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login$$superforward1(SysAuthResource_Subclass.zig:302)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass$$function$$3.apply(SysAuthResource_Subclass$$function$$3.zig:33)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:54)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.proceed(InvocationInterceptor.java:62)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor.monitor(InvocationInterceptor.java:49)
+	at io.quarkus.arc.runtime.devconsole.InvocationInterceptor_Bean.intercept(InvocationInterceptor_Bean.zig:521)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:41)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:41)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:32)
+	at xyz.easyboot.web.system.resource.SysAuthResource_Subclass.login(SysAuthResource_Subclass.zig:556)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:170)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:130)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.internalInvokeOnTarget(ResourceMethodInvoker.java:660)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTargetAfterFilter(ResourceMethodInvoker.java:524)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.lambda$invokeOnTarget$2(ResourceMethodInvoker.java:474)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invokeOnTarget(ResourceMethodInvoker.java:476)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:434)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:408)
+	at org.jboss.resteasy.core.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:69)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:492)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$invoke$4(SynchronousDispatcher.java:261)
+	at org.jboss.resteasy.core.SynchronousDispatcher.lambda$preprocess$0(SynchronousDispatcher.java:161)
+	at org.jboss.resteasy.core.interception.jaxrs.PreMatchContainerRequestContext.filter(PreMatchContainerRequestContext.java:364)
+	at org.jboss.resteasy.core.SynchronousDispatcher.preprocess(SynchronousDispatcher.java:164)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:247)
+	at io.quarkus.resteasy.runtime.standalone.RequestDispatcher.service(RequestDispatcher.java:73)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler.dispatch(VertxRequestHandler.java:135)
+	at io.quarkus.resteasy.runtime.standalone.VertxRequestHandler$1.run(VertxRequestHandler.java:90)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$13.runWith(VertxCoreRecorder.java:543)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2449)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1478)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+22:33:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-24) This is demo task
+22:34:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-25) This is demo task
+22:34:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-1) This is demo quartz task
+22:35:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-4) This is demo task
+22:36:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-7) This is demo task
+22:37:38 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-6) This is demo task
+22:37:38 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-10) This is demo quartz task
+22:38:16 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Restarting quarkus due to changes in SysUserService.class, SysUser.class.
+22:38:16 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is stopping...
+22:38:17 INFO  [io.quarkus] (Quarkus Main Thread) server1 stopped in 0.520s
+22:38:17 INFO  [xy.ea.ta.DemoTask] (QuarkusQuartzScheduler_Worker-2) This is demo task
+22:38:17 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+22:38:17 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+22:38:17 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 2.3.0.Final) started in 0.693s. Listening on: http://0.0.0.0:5935
+22:38:17 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+22:38:17 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+22:38:17 INFO  [io.qu.de.de.RuntimeUpdatesProcessor] (vert.x-worker-thread-0) Live reload total time: 1.803s 
+22:38:17 INFO  [xy.ea.ha.LoggingFilter] (executor-thread-0) Request POST /auth/login from IP 0:0:0:0:0:0:0:1:62933

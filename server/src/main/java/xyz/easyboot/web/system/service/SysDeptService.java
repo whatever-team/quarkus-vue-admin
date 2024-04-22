@@ -6,8 +6,8 @@ import xyz.easyboot.web.system.dto.SysDeptDTO;
 import xyz.easyboot.web.system.entity.SysDept;
 import xyz.easyboot.web.system.entity.SysUserDept;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.transaction.Transactional;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

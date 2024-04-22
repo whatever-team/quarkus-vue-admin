@@ -6,6 +6,7 @@ import xyz.easyboot.common.util.BeanUtil;
 import xyz.easyboot.common.util.PasswordUtil;
 import xyz.easyboot.common.util.StringUtil;
 import xyz.easyboot.common.util.TokenUtil;
+import xyz.easyboot.handler.AuthorizationConfig;
 import xyz.easyboot.web.common.resource.CaptchaResource;
 import xyz.easyboot.web.system.dto.LoginDTO;
 import xyz.easyboot.web.system.dto.SysUserDTO;
@@ -17,9 +18,10 @@ import xyz.easyboot.web.system.entity.SysUserRole;
 import xyz.easyboot.web.system.param.ChangePwdParam;
 import xyz.easyboot.web.system.param.LoginParam;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.transaction.Transactional;
-import javax.validation.ValidationException;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import jakarta.validation.ValidationException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -37,26 +39,31 @@ import java.util.stream.Collectors;
 @ApplicationScoped
 @Transactional
 public class SysUserService {
+
+    @Inject
+    AuthorizationConfig authorizationConfig;
     
     /**
      * 后台用户登录
      * @return
      */
     public LoginDTO login(LoginParam param) {
-        String name = param.getName();
+        String username = param.getUsername();
         String password = param.getPassword();
         
         // 验证码校验
-        String codeFromCache = CaptchaResource.TIMED_CACHE.get(param.getT());
-        if (StringUtil.isEmpty(codeFromCache)) {
-            throw new RuntimeException("验证码已过期");
+        if (authorizationConfig.captchaEnable()) {
+            String codeFromCache = CaptchaResource.TIMED_CACHE.get(param.getT());
+            if (StringUtil.isEmpty(codeFromCache)) {
+                throw new RuntimeException("验证码已过期");
+            }
+            if (!StringUtil.equals(param.getCode().toUpperCase(), codeFromCache)) {
+                throw new RuntimeException("验证码错误");
+            }
+            CaptchaResource.TIMED_CACHE.remove(param.getT());
         }
-        if (!StringUtil.equals(param.getCode().toUpperCase(), codeFromCache)) {
-            throw new RuntimeException("验证码错误");
-        }
-        CaptchaResource.TIMED_CACHE.remove(param.getT());
-        
-        SysUser entity = SysUser.findByPhoneAndPassword(name, password);
+
+        SysUser entity = SysUser.findByUsernameAndPassword(username, password);
         if (entity == null) {
             throw new RuntimeException("账户名或密码错误");
         }

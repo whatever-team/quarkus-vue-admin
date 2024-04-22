@@ -45,6 +45,7 @@ public class CodeGenerator {
         JPA_SERVICE_PACKAGE = BASE_PACKAGE + "." + BUSINESS_PACKAGE + ".service";
         PACKAGE_PATH_CONTROLLER = packageConvertPath(CONTROLLER_PACKAGE);
         PACKAGE_PATH_JPA_SERVICE = packageConvertPath(JPA_SERVICE_PACKAGE);
+        //TODO 支持创建XMeta常量类，将每个字段生成对应的常量
     }
     
     public static void genCode(Class... entityClasses) {

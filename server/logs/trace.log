@@ -1,0 +1,9 @@
+00:41:27 INFO  [xy.ea.ta.DemoQuarkusTask$MyJob] (QuarkusQuartzScheduler_Worker-3) This is demo quartz task
+00:41:27 INFO  [xy.ea.ta.DemoTask] (vert.x-worker-thread-1) This is demo task
+00:41:27 INFO  [xy.ea.li.AppLifecycleBean] (Quarkus Main Thread) The application is starting...
+00:41:27 INFO  [io.quarkus] (Quarkus Main Thread) server1 1.1 on JVM (powered by Quarkus 3.9.4) started in 2.446s. Listening on: http://0.0.0.0:5935
+00:41:27 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+00:41:27 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, hibernate-orm, hibernate-orm-panache, hibernate-validator, jdbc-mysql, narayana-jta, quartz, reactive-mysql-client, resteasy, resteasy-jackson, resteasy-multipart, scheduler, smallrye-context-propagation, smallrye-openapi, swagger-ui, vertx]
+00:41:41 ERROR [io.qu.re.ru.UnauthorizedExceptionMapper] (executor-thread-1) HttpAuthenticator is not found, returning HTTP status 401
+00:42:27 INFO  [xy.ea.ta.DemoTask] (vert.x-worker-thread-2) This is demo task
+00:43:27 INFO  [xy.ea.ta.DemoTask] (vert.x-worker-thread-2) This is demo task

@@ -8,9 +8,9 @@ import xyz.easyboot.web.system.entity.SysRole;
 import xyz.easyboot.web.system.entity.SysRoleMenu;
 import xyz.easyboot.web.system.entity.SysUserRole;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.transaction.Transactional;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
