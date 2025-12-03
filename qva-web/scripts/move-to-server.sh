@@ -1,0 +1,1 @@
+mv ../dist/* ../../src/main/resources/public

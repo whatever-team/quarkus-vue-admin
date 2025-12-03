@@ -44,5 +44,23 @@
 
 > 强烈推荐阅读 [《如何有效地报告 Bug》](https://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html)，更好的问题更容易获得帮助。
 
+## 当前子项目与版本（2025-12）
+
+- qva-server：Java 17 + Quarkus 3.30.1，依赖 hutool 5.8.42、Lombok 1.18.42、Freemarker 2.3.34、EasyExcel 4.0.3。
+- qva-web：Vue 3.5 + Vite 7 + Arco Design，Node ≥ 18，主要依赖 axios 1.13.x、pinia 3.x、vue-router 4.6.x。
+- web（legacy）：Vue 2.7 + Vue CLI 5 + Ant Design Vue 1.7.x，Node ≥ 14，适合兼容性场景。
+
+> 提示：升级后需要使用新的 Node 版本（建议 18+）并重新安装依赖（pnpm i）。
+
+## 待补充功能（对标主流管理后台脚手架）
+
+- 多租户与数据隔离：租户粒度的库/表隔离及资源配额。
+- 行/字段级数据权限：结合角色/部门/用户维度的细粒度访问控制。
+- 统一登录与 SSO：OIDC/SAML/LDAP、企业微信/钉钉/飞书 等三方登录。
+- 配置中心与灰度开关：远程配置、特性开关、动态路由/菜单下发。
+- 观测与稳定性：Prometheus 指标、分布式追踪、集中日志。
+- 流程/表单编排：可视化流程（BPMN）、表单/页面设计器与低代码生成。
+- 自动化测试基线：前后端单元测试 + E2E 测试脚手架。
+- CI/CD 与部署模板：镜像构建、Helm/K8s/Docker Compose 示例和质量检查流水线。
 
 

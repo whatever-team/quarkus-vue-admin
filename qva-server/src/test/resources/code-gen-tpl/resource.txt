@@ -1,0 +1,148 @@
+package ${webPackage};
+
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.json.JSONUtil;
+import io.quarkus.hibernate.orm.panache.PanacheQuery;
+import io.quarkus.panache.common.Page;
+import io.quarkus.panache.common.Sort;
+import xyz.easyboot.common.base.BaseResource;
+import xyz.easyboot.common.base.dto.PageInfo;
+import xyz.easyboot.common.base.dto.Result;
+import xyz.easyboot.common.base.message.impl.DefaultRespCodeMsg;
+import xyz.easyboot.common.util.BeanUtil;
+import xyz.easyboot.common.util.FileUtil;
+import org.jboss.resteasy.annotations.providers.multipart.MultipartForm;
+import xyz.easyboot.common.logging.Logged;
+import xyz.easyboot.web.common.dto.MultipartBody;
+import xyz.easyboot.web.common.service.ExcelService;
+import ${fullEntityName};
+import ${servicePackage}.${entityName}Service;
+
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.DELETE;
+import jakarta.ws.rs.DefaultValue;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+/**
+* Created by ${author} on ${date}.
+*/
+@Path("/${lowerHyphenEntityName}")
+@Produces(value = MediaType.APPLICATION_JSON)
+public class ${entityName}Resource extends BaseResource {
+
+    @Inject
+    ${entityName}Service service;
+    @Inject
+    ExcelService excelService;
+
+    @BusinessLog("查询${entityName}")
+    @GET
+    public Result<List<${entityName}>> list(
+            @QueryParam("sortField") @DefaultValue("seq") String sortField,
+            @QueryParam("sortType") @DefaultValue("Ascending") Sort.Direction sortType,
+            @QueryParam("pageIndex") @DefaultValue("1") int pageIndex,
+            @QueryParam("pageSize") @DefaultValue("20") int pageSize
+    ) {
+        // where
+        StringBuilder query = new StringBuilder("1 = 1");
+        Map<String, Object> args = new HashMap<>();
+
+        PanacheQuery<${entityName}> panacheQuery = ${entityName}
+                        .find(query.toString(), Sort.by(sortField, sortType), args)
+                        .page(Page.of(pageIndex - 1, pageSize));
+        List<${entityName}> list = panacheQuery.list();
+        PageInfo<${entityName}> pageInfo = new PageInfo<>(pageIndex, pageSize, panacheQuery.count(), panacheQuery.pageCount());
+        return new Result<>(list, pageInfo);
+    }
+
+    @BusinessLog
+    @GET
+    @Path("one/{id}")
+    public Result<${entityName}> one(@PathParam("id") Long id) {
+        ${entityName} data = ${entityName}.findById(id);
+        return new Result<>(data);
+    }
+
+    @BusinessLog("更新${entityName}")
+    @Transactional
+    @Consumes(MediaType.APPLICATION_JSON)
+    @PUT
+    public Result<${entityName}> update(${entityName} data) {
+        ${entityName} entity = ${entityName}.findById(data.id);
+        BeanUtil.copyPropertiesIgnoreNull(data, entity);
+        return new Result<>(entity);
+    }
+
+    @BusinessLog("新增${entityName}")
+    @Transactional
+    @Consumes(MediaType.APPLICATION_JSON)
+    @POST
+    public Result<${entityName}> add(${entityName} data) {
+        data.persist();
+        return new Result<>(data);
+    }
+
+    @BusinessLog("删除${entityName}")
+    @Transactional
+    @DELETE
+    @Path("{id}")
+    public Result<Object> delete(@PathParam("id") Long id) {
+        boolean flag = ${entityName}.deleteById(id);
+        return flag ? Result.defaultResp() : new Result<>(DefaultRespCodeMsg.FAIL);
+    }
+
+    @BusinessLog("批量删除${entityName}")
+    @Transactional
+    @DELETE
+    @Path("batch")
+    public Result<Object> deleteBatch(@QueryParam("ids") @DefaultValue("") String ids) {
+        String[] idArr = ids.split(",");
+        if (idArr.length == 0) {
+            throw new IllegalArgumentException("Please check you parameter, ids must not be empty");
+        }
+        ${entityName}.delete("id in (?1)", Arrays.stream(idArr).map(Long::parseLong).collect(Collectors.toList()));
+        return Result.defaultResp();
+    }
+
+    @BusinessLog("导出${entityName}到Excel")
+    @POST
+    @Path("export")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_OCTET_STREAM)
+    public Response exportExcel() {
+        List<${entityName}> exportList = ${entityName}.listAll();
+        File target = excelService.doExport("${entityName}" + DateUtil.now(), ${entityName}.class, exportList);
+        return Response.ok(target)
+                .header("Content-disposition", "attachment;filename=" + target.getName())
+                .build();
+    }
+
+    @BusinessLog("导入${entityName}")
+    @POST
+    @Path("import")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    public Result<Object> importExcel(@MultipartForm MultipartBody body) throws IOException {
+        InputStream is = FileUtil.getInputStreamFromInputPart(body.file);
+        excelService.doImport(is, ${entityName}.class, ${entityName}::persist);
+        return Result.defaultResp();
+    }
+
+}

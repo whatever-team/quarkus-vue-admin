@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
   .form-row{
     display: flex;
     border-bottom: 1px dashed @border-color-base;

@@ -12,12 +12,15 @@ tests/server/static/upload
 .env.local
 .env.*.local
 .eslintcache
+AGENT.md
 
 # Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+logs
+qva-server/logs/
 
 # Editor directories and files
 .idea

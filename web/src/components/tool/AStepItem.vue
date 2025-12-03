@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
   .step-item{
     cursor: pointer;
   }
