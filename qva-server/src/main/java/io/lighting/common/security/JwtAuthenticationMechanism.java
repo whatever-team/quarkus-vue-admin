@@ -10,6 +10,7 @@ import io.smallrye.mutiny.infrastructure.Infrastructure;
 import io.vertx.ext.web.RoutingContext;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import io.lighting.common.logging.CorrelationContext;
 import io.lighting.common.util.StringUtil;
 import io.lighting.web.system.entity.SysUser;
 import io.lighting.web.system.entity.SysUserRole;
@@ -42,7 +43,7 @@ public class JwtAuthenticationMechanism implements HttpAuthenticationMechanism {
             return Uni.createFrom().failure(new AuthenticationFailedException("Missing Authorization header"));
         }
 
-        return Uni.createFrom().item(() -> buildIdentity(token))
+        return Uni.createFrom().item(CorrelationContext.wrap(() -> buildIdentity(token)))
                 .runSubscriptionOn(Infrastructure.getDefaultExecutor());
     }
 
