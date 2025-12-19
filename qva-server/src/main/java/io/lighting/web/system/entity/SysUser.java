@@ -1,0 +1,65 @@
+package io.lighting.web.system.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import io.lighting.common.orm.entity.AuditableEntity;
+import io.lighting.common.util.PasswordUtil;
+
+import java.util.List;
+
+/**
+ * 系统账号
+ * @author wujiawei
+ * @see
+ * @since 2021/6/29 11:07 下午
+ */
+@Entity
+@Table(
+        name = "sys_user",
+        indexes = {
+                @Index(name = "index_username", columnList = "username"),
+                @Index(name = "index_phone", columnList = "phone")
+        }
+)
+public class SysUser extends AuditableEntity {
+
+    public String name;
+    public String username;
+    public String phone;
+    public String email;
+    public String avatar;
+    public String description;
+    
+    @JsonIgnore
+    public String password;
+    public Boolean enabled;
+    public String lastLoginIp;
+    public String lastLoginTime;
+
+    @OneToMany(mappedBy = "user")
+    public List<SysUserRole> roles;
+
+    @OneToMany(mappedBy = "user")
+    public List<SysUserDept> departments;
+    
+    public static SysUser findByUsername(String username){
+        return find("username", username).firstResult();
+    }
+    
+    public static SysUser findByPhoneAndPassword(String phone, String password) {
+        password = PasswordUtil.encrypt(password);
+        return SysUser.find("phone = ?1 and password = ?2", phone, password).firstResult();
+    }
+
+    public static SysUser findByUsernameAndPassword(String username, String password) {
+        password = PasswordUtil.encrypt(password);
+        return SysUser.find("username = ?1 and password = ?2", username, password).firstResult();
+    }
+    
+    public static List<SysUser> findEnabled() {
+        return list("enabled", Boolean.TRUE);
+    }
+    
+}
+
+
