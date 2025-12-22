@@ -42,7 +42,8 @@ import java.util.stream.Collectors;
 /**
 * Created by Quarkus-Vue-Admin on 2024-04-21.
 */
-@Path("/sys-var")
+// Use a different base path to avoid clashing with the system SysVarResource.
+@Path("/biz/sys-var")
 @Produces(value = MediaType.APPLICATION_JSON)
 public class SysVarResource extends BaseResource {
 

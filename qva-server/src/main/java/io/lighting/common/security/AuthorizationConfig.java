@@ -1,40 +1,39 @@
 package io.lighting.common.security;
 
-import io.smallrye.config.ConfigMapping;
-import io.smallrye.config.WithDefault;
+import jakarta.enterprise.context.ApplicationScoped;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 /**
- * authorization.permit-patterns
+ * authorization.* configuration wrapper.
  */
-@ConfigMapping(prefix = "authorization", namingStrategy = ConfigMapping.NamingStrategy.KEBAB_CASE)
-public interface AuthorizationConfig {
-    
-    /**
-     * 无需鉴权的路径Pattern
-     * @return
-     */
-    @WithDefault("test")
-    String permitPatterns();
+@ApplicationScoped
+public class AuthorizationConfig {
 
-    /**
-     * 是否开启登录验证码
-     * @return
-     */
-    @WithDefault("false")
-    Boolean captchaEnable();
+    @ConfigProperty(name = "authorization.permit-patterns", defaultValue = "test")
+    String permitPatterns;
 
-    /**
-     * 是否允许测试token
-     * @return
-     */
-    @WithDefault("false")
-    Boolean testTokenAllowed();
+    @ConfigProperty(name = "authorization.captcha-enable", defaultValue = "false")
+    boolean captchaEnable;
 
-    /**
-     * 测试token前缀
-     * @return
-     */
-    @WithDefault("qva-test-")
-    String testTokenPrefix();
-    
+    @ConfigProperty(name = "authorization.test-token-allowed", defaultValue = "false")
+    boolean testTokenAllowed;
+
+    @ConfigProperty(name = "authorization.test-token-prefix", defaultValue = "qva-test-")
+    String testTokenPrefix;
+
+    public String permitPatterns() {
+        return permitPatterns;
+    }
+
+    public boolean captchaEnable() {
+        return captchaEnable;
+    }
+
+    public boolean testTokenAllowed() {
+        return testTokenAllowed;
+    }
+
+    public String testTokenPrefix() {
+        return testTokenPrefix;
+    }
 }

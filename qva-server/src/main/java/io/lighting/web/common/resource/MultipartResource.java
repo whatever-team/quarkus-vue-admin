@@ -19,13 +19,14 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.ForbiddenException;
 import jakarta.ws.rs.NotFoundException;
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import org.jboss.resteasy.reactive.RestResponse;
 
 /**
  * @author wujiawei
@@ -44,7 +45,7 @@ public class MultipartResource {
     @Path("upload/{type}")
     @Consumes({MediaType.MULTIPART_FORM_DATA})
     @Produces({ MediaType.APPLICATION_JSON })
-    public Result<MultipartResponse> upload(@MultipartForm MultipartBody body, @PathParam("type") String type) {
+    public Result<MultipartResponse> upload(@MultipartForm MultipartBody body, @PathParam("type") String type) throws IOException {
         FileUpload upload = body.file;
         if (upload == null) {
             throw new BadRequestException("文件不能为空");
@@ -74,12 +75,12 @@ public class MultipartResource {
     @GET
     @Path("preview/{filePath:.+}")
     @Produces(value = MediaType.MULTIPART_FORM_DATA)
-    public Response preview(@PathParam("filePath") String filePath) {
+    public RestResponse<File> preview(@PathParam("filePath") String filePath) {
         java.nio.file.Path target = safeResolve(filePath);
         if (!Files.exists(target)) {
             throw new NotFoundException("文件不存在");
         }
-        return Response.ok(target.toFile()).build();
+        return RestResponse.ResponseBuilder.ok(target.toFile()).build();
     }
 
     private java.nio.file.Path safeResolve(String relativePath) {

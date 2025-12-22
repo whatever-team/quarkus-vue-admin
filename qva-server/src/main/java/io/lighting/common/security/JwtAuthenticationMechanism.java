@@ -19,6 +19,7 @@ import java.security.Principal;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.function.Supplier;
 
 /**
  * 基于 Bearer Token 的认证机制，接入 Quarkus 安全管线。
@@ -43,7 +44,8 @@ public class JwtAuthenticationMechanism implements HttpAuthenticationMechanism {
             return Uni.createFrom().failure(new AuthenticationFailedException("Missing Authorization header"));
         }
 
-        return Uni.createFrom().item(CorrelationContext.wrap(() -> buildIdentity(token)))
+        Supplier<SecurityIdentity> identitySupplier = () -> buildIdentity(token);
+        return Uni.createFrom().item(CorrelationContext.wrap(identitySupplier))
                 .runSubscriptionOn(Infrastructure.getDefaultExecutor());
     }
 
