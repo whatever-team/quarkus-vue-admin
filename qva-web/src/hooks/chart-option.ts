@@ -2,15 +2,9 @@ import { computed } from 'vue';
 import { EChartsOption } from 'echarts';
 import { useAppStore } from '@/store';
 
-// for code hints
-// import { SeriesOption } from 'echarts';
-// Because there are so many configuration items, this provides a relatively convenient code hint.
-// When using vue, pay attention to the reactive issues. It is necessary to ensure that corresponding functions can be triggered, TypeScript does not report errors, and code writing is convenient.
-interface optionsFn {
-  (isDark: boolean): EChartsOption;
-}
+type OptionsFn = (isDark: boolean) => EChartsOption | Record<string, any>;
 
-export default function useChartOption(sourceOption: optionsFn) {
+export default function useChartOption(sourceOption: OptionsFn) {
   const appStore = useAppStore();
   const isDark = computed(() => {
     return appStore.theme === 'dark';
@@ -19,9 +13,11 @@ export default function useChartOption(sourceOption: optionsFn) {
   // It's not used here
   // TODO echarts themes
   const chartOption = computed<EChartsOption>(() => {
-    return sourceOption(isDark.value);
+    return sourceOption(isDark.value) as EChartsOption;
   });
   return {
     chartOption,
   };
 }
+
+export type { OptionsFn };

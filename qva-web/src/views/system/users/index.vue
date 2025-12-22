@@ -316,11 +316,9 @@ type SizeProps = 'mini' | 'small' | 'medium' | 'large';
 
   // START 数据加载
   const fetchData = async (params: any) => {
-    console.log('fetchData', params);
     setLoading(true);
     try {
-      const response = await fetchQuery(params);
-      console.log(response);
+      const { data: response } = await fetchQuery(params);
       renderData.value = response.result.data;
       pagination.current = params.current;
       pagination.total = response.result.page.totalCount;

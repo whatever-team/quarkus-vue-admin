@@ -8,6 +8,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "types": ["vue/jsx"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]

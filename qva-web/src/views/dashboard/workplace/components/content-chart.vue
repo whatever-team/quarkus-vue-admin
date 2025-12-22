@@ -45,7 +45,9 @@
     graphicFactory({ left: '2.6%' }),
     graphicFactory({ right: 0 }),
   ]);
-  const { chartOption } = useChartOption(() => {
+  const { chartOption } = useChartOption((isDark: boolean) => {
+    const axisLabelColor = isDark ? '#E5E6EB' : '#4E5969';
+    const splitLineColor = isDark ? '#3D3E52' : '#E5E8EF';
     return {
       grid: {
         left: '2.6%',
@@ -59,8 +61,8 @@
         data: xAxis.value,
         boundaryGap: false,
         axisLabel: {
-          color: '#4E5969',
-          formatter(value: number, idx: number) {
+          color: axisLabelColor,
+          formatter(value: string, idx: number) {
             if (idx === 0) return '';
             if (idx === xAxis.value.length - 1) return '';
             return `${value}`;
@@ -80,7 +82,7 @@
             return true;
           },
           lineStyle: {
-            color: '#E5E8EF',
+            color: splitLineColor,
           },
         },
         axisPointer: {
@@ -106,7 +108,7 @@
           show: true,
           lineStyle: {
             type: 'dashed',
-            color: '#E5E8EF',
+            color: splitLineColor,
           },
         },
       },

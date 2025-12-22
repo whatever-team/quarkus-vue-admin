@@ -54,3 +54,5 @@ export interface Enum {
   code: string;
   desc: string;
 }
+
+export type SortType = NonNullable<Pagination['sortType']>;

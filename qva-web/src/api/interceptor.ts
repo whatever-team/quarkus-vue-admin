@@ -1,5 +1,9 @@
 import axios from 'axios';
-import type { AxiosRequestConfig, AxiosResponse } from 'axios';
+import type {
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+  AxiosRequestHeaders,
+} from 'axios';
 import { Message, Modal } from '@arco-design/web-vue';
 import { useUserStore } from '@/store';
 import { getToken } from '@/utils/auth';
@@ -10,24 +14,18 @@ if (import.meta.env.VITE_API_BASE_URL) {
 }
 
 axios.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
+  (config: InternalAxiosRequestConfig) => {
     // let each request carry token
-    // this example using the JWT token
-    // Authorization is a custom headers key
-    // please modify it according to the actual situation
     const token = getToken();
     if (token) {
       if (!config.headers) {
-        config.headers = {};
+        config.headers = {} as AxiosRequestHeaders;
       }
       config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
-  (error) => {
-    // do something
-    return Promise.reject(error);
-  }
+  (error) => Promise.reject(error)
 );
 // add response interceptors
 axios.interceptors.response.use(
@@ -59,7 +57,7 @@ axios.interceptors.response.use(
       }
       return Promise.reject(new Error(res.message || 'Error'));
     }
-    return res;
+    return response;
   },
   (error) => {
     if ([401].includes(error.code)) {
